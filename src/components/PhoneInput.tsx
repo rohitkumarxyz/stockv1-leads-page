@@ -11,7 +11,6 @@ interface PhoneInputProps {
 const PhoneInput: React.FC<PhoneInputProps> = ({
   value,
   onChange,
-  placeholder = "Enter your mobile number",
   required = false,
   className = ""
 }) => {

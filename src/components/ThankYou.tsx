@@ -8,8 +8,7 @@ import {
   TrendingUp,
   Shield,
   Users,
-  Clock,
-  Mail
+  Clock
 } from 'lucide-react';
 
 interface ThankYouProps {
