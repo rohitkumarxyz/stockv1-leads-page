@@ -132,10 +132,10 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 leading-tight descender-safe"
-              style={{ lineHeight: '1.3', wordSpacing: '0.1em', paddingBottom: '0.1em' }}
+              className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 leading-tight descender-safe"
+              style={{ lineHeight: '1.2', wordSpacing: '0.05em', paddingBottom: '0.1em' }}
             >
-              <span className="block text-white mb-2 pb-1">Stock Market</span>
+              <span className="block text-white mb-1 sm:mb-2 pb-1">Stock Market</span>
               <span className="block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent pb-1">
                 Advisory Services
               </span>
@@ -145,8 +145,8 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-lg sm:text-xl text-blue-100 mb-8 leading-relaxed max-w-lg descender-safe"
-              style={{ lineHeight: '1.7', paddingBottom: '0.1em' }}
+              className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed max-w-lg descender-safe"
+              style={{ lineHeight: '1.6', paddingBottom: '0.1em' }}
             >
               India's #1 Nifty & Bank Nifty Options Advisory with SEBI registered strategies. 
               Get potential growth trading strategies with ₹50,000+ monthly returns.
@@ -157,7 +157,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-8"
+              className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8"
             >
               {[
                 { icon: TrendingUp, text: '2 - 3 Calls Daily' },
@@ -170,12 +170,12 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
-                  className="flex items-center space-x-2 sm:space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-3 sm:p-4 border border-white/20"
+                  className="flex items-center space-x-2 sm:space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 md:p-4 border border-white/20"
                 >
-                  <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
-                    <benefit.icon className="w-5 h-5 text-white" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
-                  <span className="font-semibold text-white descender-safe" style={{ lineHeight: '1.5', paddingBottom: '0.05em' }}>{benefit.text}</span>
+                  <span className="font-semibold text-white text-sm sm:text-base descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>{benefit.text}</span>
                 </motion.div>
               ))}
             </motion.div>
@@ -185,7 +185,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-12"
+              className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-12"
             >
               <motion.a
                 href="https://wa.me/9211034704"
@@ -193,7 +193,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-2xl text-sm sm:text-base"
+                className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-2.5 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-2xl text-sm sm:text-base"
               >
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Connect Now</span>
@@ -202,7 +202,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                 href="home"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 text-white font-bold py-2.5 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base"
               >
                 <span>Free Consultation</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -214,7 +214,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.4 }}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+              className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
             >
               {stats.map((stat, index) => (
                 <motion.div
@@ -224,11 +224,11 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                   transition={{ duration: 0.5, delay: 1.5 + index * 0.1 }}
                   className="text-center"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                    <stat.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-1.5 sm:mb-2 md:mb-3">
+                    <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
                   </div>
-                  <div className="text-lg sm:text-2xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-blue-200">{stat.label}</div>
+                  <div className="text-base sm:text-lg md:text-2xl font-bold text-white mb-0.5 sm:mb-1">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-blue-200 leading-tight">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -241,7 +241,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-6 shadow-2xl border border-white/20 w-full max-w-md mx-auto lg:max-w-none">
+            <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-6 shadow-2xl border border-white/20 w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none">
               {/* Form Header */}
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}
@@ -249,31 +249,31 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                 transition={{ duration: 0.5, delay: 0.8 }}
                 className="text-center mb-8"
               >
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                  <span className="text-lg sm:text-xl">📈</span>
+                <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3 md:mb-4">
+                  <span className="text-base sm:text-lg md:text-xl">📈</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-bold text-gray-800 mb-2">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-1.5 sm:mb-2">
                   Get Expert Stock Market Advice
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base">
+                <p className="text-gray-600 text-xs sm:text-sm md:text-base">
                   Join 15K+ successful Indian traders
                 </p>
-                <div className="flex items-center justify-center space-x-4 mt-4">
-                  <div className="flex items-center space-x-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                <div className="flex items-center justify-center space-x-3 sm:space-x-4 mt-3 sm:mt-4">
+                  <div className="flex items-center space-x-0.5 sm:space-x-1">
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+                    <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
                   </div>
-                  <span className="text-sm text-gray-600">4.9/5 Rating</span>
+                  <span className="text-xs sm:text-sm text-gray-600">4.9/5 Rating</span>
                 </div>
               </motion.div>
 
-              <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
-                <div className="grid grid-cols-1 gap-3 sm:gap-4">
+              <form onSubmit={handleSubmit} className="space-y-2.5 sm:space-y-3 md:space-y-4">
+                <div className="grid grid-cols-1 gap-2.5 sm:gap-3 md:gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                       Full Name *
                     </label>
                     <input
@@ -282,12 +282,12 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                       value={formData.fullName}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-sm"
+                      className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
                       placeholder="Enter your full name"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                       Email *
                     </label>
                     <input
@@ -296,14 +296,14 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-sm"
+                      className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
                       placeholder="Enter your email"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                     Mobile *
                   </label>
                   <PhoneInput
@@ -314,7 +314,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                     Your City *
                   </label>
                   <CitySelect
@@ -324,16 +324,16 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                       Trading Segment
                     </label>
                     <select
                       name="segment"
                       value={formData.segment}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-sm"
+                      className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
                     >
                       <option value="">Select Segment</option>
                       <option value="equity">Equity</option>
@@ -343,14 +343,14 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
                       Investment Amount
                     </label>
                     <select
                       name="investment"
                       value={formData.investment}
                       onChange={handleInputChange}
-                      className="w-full px-3 py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-sm"
+                      className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
                     >
                       <option value="">Select Amount</option>
                       <option value="50k-1l">₹50K - ₹1L</option>
@@ -361,16 +361,16 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-3">
+                <div className="flex items-start space-x-2 sm:space-x-3">
                   <input
                     type="checkbox"
                     name="privacy"
                     checked={formData.privacy}
                     onChange={handleInputChange}
                     required
-                    className="w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                    className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500 mt-0.5 flex-shrink-0"
                   />
-                  <label className="text-sm text-gray-700">
+                  <label className="text-xs sm:text-sm text-gray-700 leading-relaxed">
                     I agree to the <span className="text-blue-600 font-semibold">Privacy Policy</span> and <span className="text-blue-600 font-semibold">Terms & Conditions</span>
                   </label>
                 </div>
@@ -380,7 +380,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                  className={`w-full font-bold py-2.5 px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-xl text-sm ${
+                  className={`w-full font-bold py-2 sm:py-2.5 px-3 sm:px-4 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-xl text-xs sm:text-sm ${
                     isSubmitting 
                       ? 'bg-gray-400 cursor-not-allowed' 
                       : 'bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700'
