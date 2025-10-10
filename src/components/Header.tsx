@@ -64,7 +64,7 @@ const Header = () => {
       </div>
 
       {/* Main Header */}
-      <div className={`transition-all duration-300 h-12 sm:h-14 ${isScrolled ? 'bg-white/95' : 'bg-white/90'}`}>
+      <div className={`transition-all duration-300 h-16 sm:h-20 md:h-24 lg:h-24 ${isScrolled ? 'bg-white/95' : 'bg-white/90'}`}>
         <div className="container mx-auto px-3 sm:px-6 h-full">
           <div className="flex justify-between items-center h-full">
             {/* Logo */}
@@ -74,7 +74,7 @@ const Header = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex items-center flex-shrink-0"
             >
-              <div className="w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24">
+              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36">
                 <img 
                   src="/logo.png" 
                   alt="TradeStock Logo" 
@@ -132,14 +132,14 @@ const Header = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`md:hidden p-1.5 sm:p-2 rounded-lg transition-colors duration-300 flex-shrink-0 ${
+              className={`md:hidden p-2 sm:p-3 rounded-lg transition-colors duration-300 flex-shrink-0 ${
                 isScrolled ? 'hover:bg-gray-100' : 'hover:bg-gray-100'
               }`}
             >
               {isMenuOpen ? (
-                <X className={`w-5 h-5 sm:w-6 sm:h-6 ${isScrolled ? 'text-gray-700' : 'text-gray-700'}`} />
+                <X className={`w-6 h-6 sm:w-7 sm:h-7 ${isScrolled ? 'text-gray-700' : 'text-gray-700'}`} />
               ) : (
-                <Menu className={`w-5 h-5 sm:w-6 sm:h-6 ${isScrolled ? 'text-gray-700' : 'text-gray-700'}`} />
+                <Menu className={`w-6 h-6 sm:w-7 sm:h-7 ${isScrolled ? 'text-gray-700' : 'text-gray-700'}`} />
               )}
             </button>
           </div>

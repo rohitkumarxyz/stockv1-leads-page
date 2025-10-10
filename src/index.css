@@ -28,6 +28,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Ensure no horizontal overflow */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent any element from causing horizontal scroll */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -165,18 +177,24 @@ body {
 
 /* Header spacing fix */
 .hero-section {
-  margin-top: 6rem; /* Account for fixed header */
+  margin-top: 7rem; /* Account for fixed header */
 }
 
 @media (min-width: 640px) {
   .hero-section {
-    margin-top: 7rem;
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-section {
+    margin-top: 9rem;
   }
 }
 
 @media (min-width: 1024px) {
   .hero-section {
-    margin-top: 8rem;
+    margin-top: 9rem;
   }
 }
 
@@ -185,6 +203,7 @@ body {
   .container {
     padding-left: 1rem;
     padding-right: 1rem;
+    max-width: 100%;
   }
   
   /* Improve touch targets */
@@ -202,6 +221,16 @@ body {
   /* Improve form inputs on mobile */
   input, select, textarea {
     font-size: 16px; /* Prevents zoom on iOS */
+  }
+  
+  /* Ensure no horizontal overflow on mobile */
+  * {
+    max-width: 100% !important;
+  }
+  
+  /* Fix any potential overflow issues */
+  .overflow-hidden {
+    overflow-x: hidden;
   }
 }
 

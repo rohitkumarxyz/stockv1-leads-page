@@ -241,7 +241,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="relative"
           >
-            <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-6 shadow-2xl border border-white/20 w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none">
+            <div className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3 sm:p-4 md:p-6 lg:p-6 shadow-2xl border border-white/20 w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto lg:max-w-none">
               {/* Form Header */}
               <motion.div
                 initial={{ scale: 0.9, opacity: 0 }}

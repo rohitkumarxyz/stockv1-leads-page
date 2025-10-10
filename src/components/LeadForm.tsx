@@ -91,7 +91,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
   return (
     <div id="contact">
       {/* Floating CTA Buttons */}
-      <div className="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col space-y-2 sm:space-y-3">
         {/* WhatsApp Button */}
         <motion.a
           href="https://wa.me/9211034704"
@@ -99,9 +99,9 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <MessageCircle className="w-6 h-6 text-white" />
+          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </motion.a>
 
         {/* Call Button */}
@@ -109,9 +109,9 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
           href="tel:9211034704"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-14 h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <Phone className="w-6 h-6 text-white" />
+          <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </motion.a>
 
         {/* Form Button */}
@@ -119,9 +119,9 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
           onClick={() => setIsOpen(true)}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="w-14 h-14 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
+          className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <Star className="w-6 h-6 text-white" />
+          <Star className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
         </motion.button>
       </div>
 
@@ -132,7 +132,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-2 sm:p-4"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-3 sm:p-4"
             onClick={() => setIsOpen(false)}
           >
             <motion.div
@@ -140,7 +140,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
               animate={{ scale: 1, opacity: 1, y: 0 }}
               exit={{ scale: 0.9, opacity: 0, y: 50 }}
               transition={{ type: "spring", duration: 0.5 }}
-              className="bg-white rounded-2xl p-4 sm:p-6 max-w-sm w-full max-h-[90vh] overflow-y-auto shadow-2xl mx-4"
+              className="bg-white rounded-2xl p-3 sm:p-4 md:p-6 max-w-xs sm:max-w-sm w-full max-h-[90vh] overflow-y-auto shadow-2xl mx-2 sm:mx-4"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
