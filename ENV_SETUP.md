@@ -12,7 +12,7 @@ VITE_BREVO_API_KEY=your_brevo_api_key_here
 # Sender Information (Required for production)
 # This email must be verified in your Brevo account
 VITE_BREVO_SENDER_EMAIL=your-verified-email@domain.com
-VITE_BREVO_SENDER_NAME=StockGo Team
+VITE_BREVO_SENDER_NAME=TradeStock Team
 
 # Owner Email (Where form submissions will be sent)
 VITE_OWNER_EMAIL=rohitsharma001914@gmail.com

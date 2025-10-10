@@ -1,6 +1,6 @@
-# Email Setup Guide for StockGo Lead Form
+# Email Setup Guide for TradeStock Lead Form
 
-This guide explains how to set up email functionality for the StockGo lead form using Brevo (formerly Sendinblue) email service.
+This guide explains how to set up email functionality for the TradeStock lead form using Brevo (formerly Sendinblue) email service.
 
 ## Overview
 
@@ -33,7 +33,7 @@ VITE_BREVO_API_KEY=your_actual_api_key_here
 
 # Sender Information (Required)
 VITE_BREVO_SENDER_EMAIL=your-verified-email@domain.com
-VITE_BREVO_SENDER_NAME=StockGo Team
+VITE_BREVO_SENDER_NAME=TradeStock Team
 
 # Owner Email (Where form submissions will be sent)
 VITE_OWNER_EMAIL=rohitsharma001914@gmail.com
@@ -76,7 +76,7 @@ The system includes two email templates:
 ### 2. User Confirmation Email
 - Sent to: The user who submitted the form
 - Contains: Thank you message and next steps
-- Subject: "Thank you for your interest in StockGo!"
+- Subject: "Thank you for your interest in TradeStock!"
 
 ## Troubleshooting
 

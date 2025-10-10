@@ -9,8 +9,8 @@ export const emailConfig = {
   
   // Default sender information (can be overridden by environment variables)
   defaultSender: {
-    name: 'StockGo Lead Form',
-    email: 'noreply@stockgo.com'
+    name: 'TradeStock Lead Form',
+    email: 'noreply@tradestock.com'
   }
 };
 
