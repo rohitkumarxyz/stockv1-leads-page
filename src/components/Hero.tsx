@@ -20,9 +20,10 @@ import { testEmailConfiguration } from '../utils/emailTest';
 
 interface HeroProps {
   onFormSuccess: () => void;
+  onContactClick: () => void;
 }
 
-const Hero = ({ onFormSuccess }: HeroProps) => {
+const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -198,15 +199,15 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Connect Now</span>
               </motion.a>
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={onContactClick}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 text-white font-bold py-2.5 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base"
               >
                 <span>Free Consultation</span>
                 <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-              </motion.a>
+              </motion.button>
             </motion.div>
 
             {/* Stats */}

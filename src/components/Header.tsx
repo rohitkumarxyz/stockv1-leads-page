@@ -2,7 +2,11 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X, Phone, ArrowUpRight, Star, TrendingUp, MessageCircle } from 'lucide-react';
 
-const Header = () => {
+interface HeaderProps {
+  onContactClick: () => void;
+}
+
+const Header = ({ onContactClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -117,8 +121,8 @@ const Header = () => {
                 <span className="hidden lg:inline">Connect Now</span>
                 <span className="lg:hidden">Connect</span>
               </motion.a>
-              <motion.a
-                href="#contact"
+              <motion.button
+                onClick={onContactClick}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-3 lg:py-2.5 lg:px-5 rounded-lg transition-all duration-300 flex items-center space-x-1 lg:space-x-2 shadow-lg text-xs sm:text-sm lg:text-base"
@@ -126,7 +130,7 @@ const Header = () => {
                 <span className="hidden lg:inline">Get Started</span>
                 <span className="lg:hidden">Start</span>
                 <ArrowUpRight className="w-3 h-3 sm:w-4 sm:h-4" />
-              </motion.a>
+              </motion.button>
             </div>
 
             {/* Mobile Menu Button */}
@@ -178,9 +182,9 @@ const Header = () => {
                 <MessageCircle className="w-4 h-4" />
                 <span>Connect Now</span>
               </a>
-              <a href="#contact" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center block text-sm sm:text-base">
+              <button onClick={onContactClick} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center block text-sm sm:text-base">
                 Get Started
-              </a>
+              </button>
             </div>
           </nav>
         </div>

@@ -12,7 +12,11 @@ import {
   MessageCircle
 } from 'lucide-react';
 
-const Services = () => {
+interface ServicesProps {
+  onContactClick: () => void;
+}
+
+const Services = ({ onContactClick }: ServicesProps) => {
   const services = [
     {
       icon: TrendingUp,
@@ -163,15 +167,15 @@ const Services = () => {
                     <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
                     <span>Connect Now</span>
                   </motion.a>
-                  <motion.a
-                    href="#contact"
+                  <motion.button
+                    onClick={onContactClick}
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={`w-full bg-gradient-to-r ${service.color} text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg text-xs sm:text-sm md:text-base`}
                   >
                     <span>Get Started</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                  </motion.a>
+                  </motion.button>
                 </div>
               </div>
             </motion.div>

@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
 import { Star, Quote, TrendingUp, Shield, Target } from 'lucide-react';
 
-const Testimonials = () => {
+interface TestimonialsProps {
+  onContactClick: () => void;
+}
+
+const Testimonials = ({ onContactClick }: TestimonialsProps) => {
   // Function to get initials from name
   const getInitials = (name: string) => {
     return name.split(' ').map(word => word[0]).join('').toUpperCase();
@@ -194,15 +198,15 @@ const Testimonials = () => {
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
               Start your journey with Trade Stock and become part of our growing community of successful investors.
             </p>
-            <motion.a
-              href="#contact"
+            <motion.button
+              onClick={onContactClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
             >
               <span>Get Started Today</span>
               <TrendingUp className="w-5 h-5" />
-            </motion.a>
+            </motion.button>
           </div>
         </motion.div>
       </div>

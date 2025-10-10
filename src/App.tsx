@@ -34,13 +34,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Header />
-      <Hero onFormSuccess={handleFormSuccess} />
-      <Services />
+      <Header onContactClick={handleContactClick} />
+      <Hero onFormSuccess={handleFormSuccess} onContactClick={handleContactClick} />
+      <Services onContactClick={handleContactClick} />
       <About />
-      <Packages />
-      <Testimonials />
-      <FAQ onFormSuccess={handleFormSuccess} />
+      <Packages onContactClick={handleContactClick} />
+      <Testimonials onContactClick={handleContactClick} />
+      <FAQ onFormSuccess={handleFormSuccess} onContactClick={handleContactClick} />
       <Footer onContactClick={handleContactClick} />
       <LeadForm ref={leadFormRef} onFormSuccess={handleFormSuccess} />
     </div>
