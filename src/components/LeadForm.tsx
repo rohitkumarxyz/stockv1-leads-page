@@ -94,7 +94,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col space-y-2 sm:space-y-3">
         {/* WhatsApp Button */}
         <motion.a
-          href="https://wa.me/9211034704"
+          href="https://wa.me/8527506837"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
@@ -106,7 +106,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
 
         {/* Call Button */}
         <motion.a
-          href="tel:9211034704"
+          href="tel:8527506837"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"

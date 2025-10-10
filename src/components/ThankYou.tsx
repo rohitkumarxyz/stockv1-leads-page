@@ -154,7 +154,7 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
             <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 sm:mb-4">Need immediate assistance?</h3>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <motion.a
-                href="https://wa.me/9211034704"
+                href="https://wa.me/8527506837"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -165,7 +165,7 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
                 <span>WhatsApp Now</span>
               </motion.a>
               <motion.a
-                href="tel:9211034704"
+                href="tel:8527506837"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg text-sm sm:text-base"

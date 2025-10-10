@@ -471,15 +471,15 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Phone className="w-5 h-5 text-primary-600" />
-                    <span>9211034704</span>
+                    <span>8527506837</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Mail className="w-5 h-5 text-primary-600" />
-                    <span>help.Trade Stock@gmail.com</span>
+                    <span>help.tradestock@gmail.com</span>
                   </div>
                   <div className="flex items-start space-x-3 text-gray-600">
                     <MapPin className="w-5 h-5 text-primary-600 mt-1" />
-                    <span>139 FCS Software Solutions Sec 58 Noida Ghaziabad 201305</span>
+                    <span>139 FCS software solutions sec 58, noida ghaziabad 201305</span>
                   </div>
                 </div>
               </div>

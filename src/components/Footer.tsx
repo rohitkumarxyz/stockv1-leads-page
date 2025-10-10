@@ -159,7 +159,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
                 <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    A-88, PCS Software Solutions, 504, 5th floor, Sector 63, Noida, Uttar Pradesh 201305
+                    139 FCS software solutions sec 58, noida ghaziabad 201305
                   </p>
                 </div>
               </div>
@@ -167,10 +167,10 @@ const Footer = ({ onContactClick }: FooterProps) => {
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
                 <a
-                  href="tel:+918211834704"
+                  href="tel:8527506837"
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
                 >
-                  +91 8211834704
+                  +91 8527506837
                 </a>
               </div>
               

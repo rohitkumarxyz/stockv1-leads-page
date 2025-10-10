@@ -189,7 +189,7 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-12"
             >
               <motion.a
-                href="https://wa.me/9211034704"
+                href="https://wa.me/8527506837"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}

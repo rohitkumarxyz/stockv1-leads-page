@@ -43,7 +43,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
           <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-6">
             <div className="flex items-center space-x-1 sm:space-x-2">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
-              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>+91 8211834704</span>
+              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>+91 8527506837</span>
             </div>
             <div className="hidden sm:flex items-center space-x-1 sm:space-x-2">
               <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
@@ -106,7 +106,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
             {/* CTA Buttons */}
             <div className="hidden md:flex items-center space-x-1.5 sm:space-x-2 lg:space-x-3 flex-shrink-0">
               <motion.a
-                href="https://wa.me/9211034704"
+                href="https://wa.me/8527506837"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
@@ -174,7 +174,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
             ))}
             <div className="flex flex-col space-y-2 pt-3 border-t border-gray-200">
               <a
-                href="https://wa.me/9211034704"
+                href="https://wa.me/8527506837"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center flex items-center justify-center space-x-2 text-sm sm:text-base"
