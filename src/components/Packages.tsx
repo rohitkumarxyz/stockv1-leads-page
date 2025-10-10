@@ -238,7 +238,7 @@ const Packages = () => {
                   <span>Connect Now</span>
                 </motion.a>
                 <motion.a
-                  href="home"
+                  href="#contact"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white font-semibold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm md:text-base"
@@ -268,7 +268,7 @@ const Packages = () => {
               Join thousands of successful traders who trust our advisory services.
             </p>
             <motion.a
-              href="home"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-2.5 sm:py-3 md:py-4 px-4 sm:px-6 md:px-8 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 mx-auto text-xs sm:text-sm md:text-base"

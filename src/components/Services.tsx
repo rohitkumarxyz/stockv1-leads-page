@@ -164,7 +164,7 @@ const Services = () => {
                     <span>Connect Now</span>
                   </motion.a>
                   <motion.a
-                    href="home"
+                    href="#contact"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className={`w-full bg-gradient-to-r ${service.color} text-white font-bold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg text-xs sm:text-sm md:text-base`}

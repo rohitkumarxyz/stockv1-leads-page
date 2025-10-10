@@ -19,7 +19,7 @@ const Header = () => {
     { name: 'Services', href: '#services' },
     { name: 'About Us', href: '#about' },
     { name: 'Packages', href: '#packages' },
-    { name: 'Contact Us', href: 'home' },
+    { name: 'Contact Us', href: '#contact' },
   ];
 
   return (
@@ -48,7 +48,7 @@ const Header = () => {
           </div>
           <div className="hidden sm:flex items-center space-x-1 sm:space-x-2 lg:space-x-6">
             <a
-              href="home"
+              href="#contact"
               className="hover:text-blue-400 transition-colors duration-300 flex items-center space-x-1 text-xs sm:text-sm"
             >
               <span className="hidden lg:inline">Request Callback</span>
@@ -118,7 +118,7 @@ const Header = () => {
                 <span className="lg:hidden">Connect</span>
               </motion.a>
               <motion.a
-                href="home"
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-1.5 sm:py-2 px-2 sm:px-3 lg:py-2.5 lg:px-5 rounded-lg transition-all duration-300 flex items-center space-x-1 lg:space-x-2 shadow-lg text-xs sm:text-sm lg:text-base"
@@ -178,7 +178,7 @@ const Header = () => {
                 <MessageCircle className="w-4 h-4" />
                 <span>Connect Now</span>
               </a>
-              <a href="home" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center block text-sm sm:text-base">
+              <a href="#contact" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center block text-sm sm:text-base">
                 Get Started
               </a>
             </div>

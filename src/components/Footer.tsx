@@ -23,7 +23,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
     { name: 'Home', href: '#home' },
     { name: 'Our Services', href: '#services' },
     { name: 'About Us', href: '#about' },
-    { name: 'Contact Us', href: 'home', isContact: true },
+    { name: 'Contact Us', href: '#contact', isContact: true },
     { name: 'Privacy Policy', href: '#' }
   ];
 

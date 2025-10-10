@@ -290,7 +290,7 @@ const FAQ = ({ onFormSuccess }: FAQProps) => {
                   <span className="text-2xl">👋</span>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">
-                  <a href="home" className="text-primary-600 hover:text-primary-700 font-bold">
+                  <a href="#contact" className="text-primary-600 hover:text-primary-700 font-bold">
                     Enquiry Now To Grow Your Profit!!!
                   </a>
                 </h3>

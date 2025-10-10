@@ -199,7 +199,7 @@ const Hero = ({ onFormSuccess }: HeroProps) => {
                 <span>Connect Now</span>
               </motion.a>
               <motion.a
-                href="home"
+                href="#contact"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white/10 backdrop-blur-sm border-2 border-white/30 hover:bg-white/20 text-white font-bold py-2.5 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 text-sm sm:text-base"

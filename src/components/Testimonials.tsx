@@ -195,7 +195,7 @@ const Testimonials = () => {
               Start your journey with Trade Stock and become part of our growing community of successful investors.
             </p>
             <motion.a
-              href="home"
+              href="#contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-flex items-center space-x-2"
