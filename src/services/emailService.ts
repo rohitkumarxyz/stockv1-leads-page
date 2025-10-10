@@ -68,7 +68,7 @@ export const sendFormSubmissionEmail = async (formData: FormSubmissionData) => {
           <div class="container">
             <div class="header">
               <h1>🎯 NEW LEAD - IMMEDIATE ACTION REQUIRED</h1>
-              <p>StockGo Investment Platform</p>
+              <p>Tradestock Investment</p>
             </div>
             <div class="content">
               <div class="urgent">
@@ -127,7 +127,7 @@ export const sendFormSubmissionEmail = async (formData: FormSubmissionData) => {
               
               <p><strong>Submission Time:</strong> ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}</p>
               
-              <p>Best regards,<br>StockGo Lead System</p>
+              <p>Best regards,<br>Tradestock Investment</p>
             </div>
             <div class="footer">
               <p>This is an automated message from your lead form system.</p>
