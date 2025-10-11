@@ -1,4 +1,5 @@
-import { useState, useRef } from 'react';
+import { useRef } from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -10,16 +11,12 @@ import Footer from './components/Footer';
 import LeadForm, { type LeadFormRef } from './components/LeadForm';
 import ThankYou from './components/ThankYou';
 
-function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'thank-you'>('home');
+function HomePage() {
   const leadFormRef = useRef<LeadFormRef>(null);
+  const navigate = useNavigate();
 
   const handleFormSuccess = () => {
-    setCurrentPage('thank-you');
-  };
-
-  const handleBackToHome = () => {
-    setCurrentPage('home');
+    navigate('/thank-you');
   };
 
   const handleContactClick = () => {
@@ -27,10 +24,6 @@ function App() {
       leadFormRef.current.openForm();
     }
   };
-
-  if (currentPage === 'thank-you') {
-    return <ThankYou onBackToHome={handleBackToHome} />;
-  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -44,6 +37,17 @@ function App() {
       <Footer onContactClick={handleContactClick} />
       <LeadForm ref={leadFormRef} onFormSuccess={handleFormSuccess} />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/thank-you" element={<ThankYou />} />
+      </Routes>
+    </Router>
   );
 }
 

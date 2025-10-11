@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { 
   CheckCircle, 
   Phone, 
@@ -10,11 +11,8 @@ import {
   Clock
 } from 'lucide-react';
 
-interface ThankYouProps {
-  onBackToHome: () => void;
-}
-
-const ThankYou = ({ onBackToHome }: ThankYouProps) => {
+const ThankYou = () => {
+  const navigate = useNavigate();
   const features = [
     { icon: TrendingUp, text: 'Expert Market Analysis' },
     { icon: Shield, text: 'SEBI Registered Advisory' },
@@ -191,7 +189,7 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
             className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center"
           >
             <motion.button
-              onClick={onBackToHome}
+              onClick={() => navigate('/')}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-2.5 sm:py-3 px-6 sm:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg text-sm sm:text-base"
