@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { 
   CheckCircle, 
-  MessageCircle, 
   Phone, 
   ArrowRight,
   Star,
@@ -30,7 +29,7 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
       description: 'Our expert will analyze your requirements and contact you'
     },
     {
-      icon: MessageCircle,
+      icon: 'whatsapp',
       title: 'Personal Consultation',
       description: 'Get personalized investment strategy based on your goals'
     },
@@ -110,7 +109,11 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
                 className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-2 sm:p-3 md:p-4 border border-blue-200"
               >
                 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center mx-auto mb-2 sm:mb-3">
-                  <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  {typeof feature.icon === 'string' ? (
+                    <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5" />
+                  ) : (
+                    <feature.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                  )}
                 </div>
                 <p className="text-xs sm:text-sm font-semibold text-gray-700 leading-tight">{feature.text}</p>
               </motion.div>
@@ -135,7 +138,11 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
                   className="text-center"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <step.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
+                    {typeof step.icon === 'string' ? (
+                      <img src="/whatsapp.png" alt="WhatsApp" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8" />
+                    ) : (
+                      <step.icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-white" />
+                    )}
                   </div>
                   <h4 className="font-bold text-gray-900 mb-1.5 sm:mb-2 text-sm sm:text-base">{step.title}</h4>
                   <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">{step.description}</p>
@@ -161,7 +168,7 @@ const ThankYou = ({ onBackToHome }: ThankYouProps) => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-2.5 sm:py-3 px-4 sm:px-6 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg text-sm sm:text-base"
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>WhatsApp Now</span>
               </motion.a>
               <motion.a

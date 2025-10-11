@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X, Phone, ArrowUpRight, Star, TrendingUp, MessageCircle } from 'lucide-react';
+import { Menu, X, Phone, ArrowUpRight, Star, TrendingUp } from 'lucide-react';
 
 interface HeaderProps {
   onContactClick: () => void;
@@ -43,7 +43,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
           <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-6">
             <div className="flex items-center space-x-1 sm:space-x-2">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
-              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>+91 8527506837</span>
+              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>+91 8211834704</span>
             </div>
             <div className="hidden sm:flex items-center space-x-1 sm:space-x-2">
               <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
@@ -117,7 +117,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
                     : 'bg-green-600/90 hover:bg-green-700/90 text-white'
                 }`}
               >
-                <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span className="hidden lg:inline">Connect Now</span>
                 <span className="lg:hidden">Connect</span>
               </motion.a>
@@ -179,7 +179,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
                 rel="noopener noreferrer"
                 className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center flex items-center justify-center space-x-2 text-sm sm:text-base"
               >
-                <MessageCircle className="w-4 h-4" />
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4" />
                 <span>Connect Now</span>
               </a>
               <button onClick={onContactClick} className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold py-2 sm:py-2.5 px-4 sm:px-5 rounded-lg transition-all duration-300 w-full text-center block text-sm sm:text-base">

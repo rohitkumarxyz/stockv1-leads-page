@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { 
   TrendingUp, 
   Shield, 
-  MessageCircle, 
   BarChart3, 
   CheckCircle,
   ArrowRight,
@@ -163,7 +162,7 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               {[
                 { icon: TrendingUp, text: '2 - 3 Calls Daily' },
                 { icon: Shield, text: 'SEBI Registered' },
-                { icon: MessageCircle, text: 'WhatsApp Support' },
+                { icon: 'whatsapp', text: 'WhatsApp Support' },
                 { icon: BarChart3, text: '5X Growth Potential' }
               ].map((benefit, index) => (
                 <motion.div
@@ -174,7 +173,11 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
                   className="flex items-center space-x-2 sm:space-x-3 bg-white/10 backdrop-blur-sm rounded-lg p-2.5 sm:p-3 md:p-4 border border-white/20"
                 >
                   <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    {typeof benefit.icon === 'string' ? (
+                      <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5" />
+                    ) : (
+                      <benefit.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                    )}
                   </div>
                   <span className="font-semibold text-white text-sm sm:text-base descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>{benefit.text}</span>
                 </motion.div>
@@ -196,7 +199,7 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-2.5 sm:py-3 md:py-4 px-5 sm:px-6 md:px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-2xl text-sm sm:text-base"
               >
-                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <img src="/whatsapp.png" alt="WhatsApp" className="w-4 h-4 sm:w-5 sm:h-5" />
                 <span>Connect Now</span>
               </motion.a>
               <motion.button

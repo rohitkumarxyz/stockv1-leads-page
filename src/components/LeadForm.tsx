@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { 
   X, 
   Phone, 
-  MessageCircle, 
   ArrowRight,
   CheckCircle,
   Star,
@@ -101,7 +100,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
           whileTap={{ scale: 0.9 }}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"
         >
-          <MessageCircle className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+          <img src="/whatsapp.png" alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
         </motion.a>
 
         {/* Call Button */}

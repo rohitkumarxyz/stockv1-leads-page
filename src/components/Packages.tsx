@@ -7,8 +7,7 @@ import {
   Shield,
   Target,
   Zap,
-  HandCoins,
-  MessageCircle
+  HandCoins
 } from 'lucide-react';
 
 interface PackagesProps {
@@ -238,7 +237,7 @@ const Packages = ({ onContactClick }: PackagesProps) => {
                   whileTap={{ scale: 0.98 }}
                   className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-2.5 md:py-3 px-3 sm:px-4 md:px-6 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm md:text-base"
                 >
-                  <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
+                  <img src="/whatsapp.png" alt="WhatsApp" className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span>Connect Now</span>
                 </motion.a>
                 <motion.button
