@@ -152,7 +152,7 @@ const Packages = ({ onContactClick }: PackagesProps) => {
             style={{ lineHeight: '1.6', paddingBottom: '0.1em' }}
           >
             Choose the perfect package that suits your investment goals and capital requirements. 
-            All packages come with our signature "Pay After Profit" guarantee.
+            All packages come with our signature "Pay After Profit" model.
           </motion.p>
         </motion.div>
 
