@@ -43,7 +43,7 @@ const Header = ({ onContactClick }: HeaderProps) => {
           <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-6">
             <div className="flex items-center space-x-1 sm:space-x-2">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
-              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>+91 8211834704</span>
+              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>+91 8527506837</span>
             </div>
             <div className="hidden sm:flex items-center space-x-1 sm:space-x-2">
               <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
