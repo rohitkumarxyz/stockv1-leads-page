@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import { 
   CheckCircle, 
   Phone, 
@@ -8,11 +9,34 @@ import {
   TrendingUp,
   Shield,
   Users,
-  Clock
+  Clock,
+  AlertCircle
 } from 'lucide-react';
 
 const ThankYou = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [isValidSubmission, setIsValidSubmission] = useState(false);
+
+  useEffect(() => {
+    // Check if user came from form submission
+    const submitted = searchParams.get('submitted');
+    const token = searchParams.get('token');
+    
+    if (submitted === 'true' && token) {
+      setIsValidSubmission(true);
+      // Store in sessionStorage to persist during session
+      sessionStorage.setItem('formSubmissionToken', token);
+    } else {
+      // Check sessionStorage as fallback
+      const storedToken = sessionStorage.getItem('formSubmissionToken');
+      if (storedToken) {
+        setIsValidSubmission(true);
+      } else {
+        setIsValidSubmission(false);
+      }
+    }
+  }, [searchParams]);
   const features = [
     { icon: TrendingUp, text: 'Expert Market Analysis' },
     { icon: Shield, text: 'SEBI Registered Advisory' },
@@ -37,6 +61,51 @@ const ThankYou = () => {
       description: 'Begin your journey with our proven strategies'
     }
   ];
+
+  // If not a valid submission, show different content
+  if (!isValidSubmission) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center px-3 sm:px-4 py-4 sm:py-8">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-900/50 to-transparent"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative z-10 max-w-xs sm:max-w-sm md:max-w-2xl lg:max-w-4xl mx-auto text-center w-full">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="bg-white/95 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-8 lg:p-12 shadow-2xl border border-white/20"
+          >
+            <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl">
+              <AlertCircle className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+            </div>
+            
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-4">
+              No Active Submission
+            </h1>
+            
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+              This page is only available after submitting the contact form. Please fill out the form to receive confirmation.
+            </p>
+
+            <motion.button
+              onClick={() => navigate('/')}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 flex items-center justify-center space-x-2 shadow-lg mx-auto"
+            >
+              <span>Go to Home</span>
+              <ArrowRight className="w-5 h-5" />
+            </motion.button>
+          </motion.div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 flex items-center justify-center px-3 sm:px-4 py-4 sm:py-8">

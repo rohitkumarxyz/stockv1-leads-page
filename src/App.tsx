@@ -16,7 +16,9 @@ function HomePage() {
   const navigate = useNavigate();
 
   const handleFormSuccess = () => {
-    navigate('/thank-you');
+    // Generate a unique token for this submission
+    const submissionToken = Date.now().toString(36) + Math.random().toString(36).substr(2);
+    navigate(`/thank-you?submitted=true&token=${submissionToken}`);
   };
 
   const handleContactClick = () => {
