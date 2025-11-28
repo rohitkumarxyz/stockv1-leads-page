@@ -10,6 +10,7 @@ import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import LeadForm, { type LeadFormRef } from './components/LeadForm';
 import ThankYou from './components/ThankYou';
+import Privacy from './components/Privacy';
 
 function HomePage() {
   const leadFormRef = useRef<LeadFormRef>(null);
@@ -48,6 +49,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/thank-you" element={<ThankYou />} />
+        <Route path="/privacy" element={<Privacy />} />
       </Routes>
     </Router>
   );

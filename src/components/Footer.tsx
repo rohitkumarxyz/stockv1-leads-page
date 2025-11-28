@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { 
   Phone, 
   Mail, 
@@ -24,7 +25,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
     { name: 'Our Services', href: '#services' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact Us', href: '#contact', isContact: true },
-    { name: 'Privacy Policy', href: '#' }
+    { name: 'Privacy Policy', href: '/privacy', isRoute: true }
   ];
 
   const services = [
@@ -119,6 +120,14 @@ const Footer = ({ onContactClick }: FooterProps) => {
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
                       <span>{link.name}</span>
                     </button>
+                  ) : link.isRoute ? (
+                    <Link
+                      to={link.href}
+                      className="text-gray-300 hover:text-primary-400 transition-colors duration-300 flex items-center space-x-2 group"
+                    >
+                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      <span>{link.name}</span>
+                    </Link>
                   ) : (
                     <a
                       href={link.href}
