@@ -29,7 +29,6 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
     mobile: '',
     state: '',
     segment: '',
-    investment: '',
     privacy: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -37,8 +36,8 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
 
   const faqs = [
     {
-      question: 'What Are Trade Stock Investment Advisory Service?',
-      answer: 'Trade Stock Investment Advisory Service is a comprehensive platform that provides:',
+      question: 'What Are Trade Stock Research Services?',
+      answer: 'Trade Stock Research Services is a comprehensive platform that provides:',
       features: [
         'Financial Planning - Personalized investment strategies based on your financial goals',
         'Diversification - Portfolio optimization across different asset classes',
@@ -48,58 +47,75 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
       ]
     },
     {
-      question: 'Why Choose Trade Stock Investment Advisory Services?',
+      question: 'Why Choose Trade Stock Research Services?',
       answer: 'We offer several advantages that make us the preferred choice:',
       features: [
-        'SEBI verified strategies and analysts',
+        'SEBI Registered Research Analyst (INH000018577)',
         'Research-backed insights and market analysis',
         'Real-time updates and expert guidance',
-        'Proven track record of successful trades',
         'Personalized support and risk management',
-        'Transparent fee structure with "Pay After Profit" model'
+        'Transparent, GST-inclusive subscription pricing'
       ]
     },
     {
-      question: 'Why should I hire Share Market Advisory services?',
-      answer: 'Professional advisory services provide numerous benefits:',
+      question: 'Why should I hire Share Market Research services?',
+      answer: 'Professional research services provide numerous benefits:',
       features: [
         'Expert market analysis and insights',
         'Risk management and portfolio optimization',
         'Time-saving research and analysis',
         'Access to professional trading strategies',
-        'Emotional discipline and objective decision making',
-        'Higher probability of consistent returns'
+        'Emotional discipline and objective decision making'
       ]
     },
     {
-      question: 'What is the minimum investment required?',
-      answer: 'Our packages are designed to accommodate different investment levels:',
+      question: 'How do I get started with Trade Stock Research Services?',
+      answer: 'Getting started is simple and quick:',
       features: [
-        'Welcome Package: Minimum ₹50,000 capital',
-        'Silver Package: Minimum ₹1,00,000 capital',
-        'Golden Package: Minimum ₹3,00,000 capital',
-        'Diamond Package: Minimum ₹10,00,000 capital'
+        'Fill out the enquiry form or connect with us on WhatsApp',
+        'Speak to our team to choose the segment that suits you',
+        'Pick a subscription duration (Weekly, Monthly, Quarterly, Half Yearly or Yearly)',
+        'Complete payment and receive onboarding details',
+        'Start receiving research-based calls and alerts'
       ]
     },
     {
-      question: 'How accurate are your trading calls?',
-      answer: 'We maintain high accuracy through:',
+      question: 'How will I receive your research calls and alerts?',
+      answer: 'We deliver our research through multiple convenient channels:',
       features: [
-        '95%+ success rate in our trading calls',
-        'Research-backed analysis and market insights',
-        'SEBI verified strategies and methodologies',
-        'Experienced team of market analysts',
-        'Real-time market monitoring and adjustments'
+        'Real-time WhatsApp alerts for entry, exit and stop-loss',
+        'Phone call support during market hours',
+        'Email summaries and research reports',
+        'Timely follow-up notifications on open positions'
+      ]
+    },
+    {
+      question: 'Are your services SEBI registered?',
+      answer: 'Yes, we are fully SEBI compliant:',
+      features: [
+        'SEBI Registered Research Analyst (INH000018577)',
+        'All research follows SEBI Research Analyst Regulations',
+        'Transparent, ethical and fully compliant research services',
+        'Mandatory risk disclosures with every recommendation'
+      ]
+    },
+    {
+      question: 'Can I cancel or change my subscription?',
+      answer: 'Our subscription policy is flexible and transparent:',
+      features: [
+        'Choose any duration that suits you - Weekly to Yearly',
+        'Upgrade to a different segment by contacting our team',
+        'Renewals are not auto-charged - confirm with us each time',
+        'All charges are exclusive of GST and disclosed upfront'
       ]
     },
     {
       question: 'What support do you provide?',
       answer: 'We offer comprehensive support including:',
       features: [
-        'WhatsApp and phone support',
-        'Real-time market updates',
-        'Personal portfolio manager (for higher packages)',
-        'Risk management guidance',
+        'WhatsApp and phone support during market hours',
+        'Real-time market updates and alerts',
+        'Risk management guidance with every call',
         'Market analysis and research reports'
       ]
     }
@@ -205,7 +221,7 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
               variants={itemVariants}
               className="text-lg text-gray-600 mb-8 leading-relaxed"
             >
-              Trade Stock is a leading provider of intraday tips and investment advisory services. 
+              Trade Stock is a leading provider of intraday tips and stock market research services. 
               Here are answers to the most frequently asked questions about our services.
             </motion.p>
 
@@ -356,42 +372,22 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Segment
-                    </label>
-                    <select
-                      name="segment"
-                      value={formData.segment}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
-                    >
-                      <option value="">Select Segment</option>
-                      <option value="equity">Equity</option>
-                      <option value="futures">Futures</option>
-                      <option value="options">Options</option>
-                      <option value="commodity">Commodity</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Investment Amount
-                    </label>
-                    <select
-                      name="investment"
-                      value={formData.investment}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
-                    >
-                      <option value="">Select Amount</option>
-                      <option value="50k">₹50K</option>
-                      <option value="1l">₹1L</option>
-                      <option value="2l">₹2L</option>
-                      <option value="5l">₹5L</option>
-                      <option value="10l+">₹10L+</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                    Segment
+                  </label>
+                  <select
+                    name="segment"
+                    value={formData.segment}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300"
+                  >
+                    <option value="">Select Segment</option>
+                    <option value="equity">Equity</option>
+                    <option value="futures">Futures</option>
+                    <option value="options">Options</option>
+                    <option value="commodity">Commodity</option>
+                  </select>
                 </div>
 
                 <div className="flex items-center space-x-3">
@@ -475,11 +471,11 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
                   </div>
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Mail className="w-5 h-5 text-primary-600" />
-                    <span>help.tradestock@gmail.com</span>
+                    <span>chahatmangla.ra@gmail.com</span>
                   </div>
                   <div className="flex items-start space-x-3 text-gray-600">
                     <MapPin className="w-5 h-5 text-primary-600 mt-1" />
-                    <span>139 FCS software solutions sec 58, noida ghaziabad 201305</span>
+                    <span>1016, Gali No. 2, Bhoor Colony, Sector 29, Faridabad, Haryana, 121008</span>
                   </div>
                 </div>
               </div>

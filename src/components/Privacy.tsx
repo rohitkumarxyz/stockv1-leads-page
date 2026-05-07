@@ -76,7 +76,7 @@ const Privacy = () => {
                 <ul className="list-disc pl-6 space-y-2 text-gray-700">
                   <li><strong>Account</strong> means a unique account created for You to access our Service or parts of our Service.</li>
                   <li><strong>Affiliate</strong> means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.</li>
-                  <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to TradeStock, 139 FCS software solutions sec 58, noida ghaziabad 201305.</li>
+                  <li><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to TradeStock, 1016, Gali No. 2, Bhoor Colony, Sector 29, Faridabad, Haryana, 121008.</li>
                   <li><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
                   <li><strong>Country</strong> refers to: India</li>
                   <li><strong>Device</strong> means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
@@ -290,7 +290,7 @@ const Privacy = () => {
                   If you have any questions about this Privacy Policy, You can contact us:
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  By email: <a href="mailto:help.tradestock@gmail.com" className="text-blue-600 hover:text-blue-800 underline">help.tradestock@gmail.com</a>
+                  By email: <a href="mailto:chahatmangla.ra@gmail.com" className="text-blue-600 hover:text-blue-800 underline">chahatmangla.ra@gmail.com</a>
                 </p>
               </section>
 

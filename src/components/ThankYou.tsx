@@ -38,9 +38,9 @@ const ThankYou = () => {
   }, [searchParams]);
   const features = [
     { icon: TrendingUp, text: 'Expert Market Analysis' },
-    { icon: Shield, text: 'SEBI Registered Advisory' },
-    { icon: Users, text: '15K+ Happy Clients' },
-    { icon: Star, text: '5X Growth Potential' }
+    { icon: Shield, text: 'SEBI Registered Research' },
+    { icon: Users, text: '2K+ Happy Clients' },
+    { icon: Star, text: 'Research Based Analysis' }
   ];
 
   const nextSteps = [

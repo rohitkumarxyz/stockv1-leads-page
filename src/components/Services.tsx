@@ -4,7 +4,6 @@ import {
   BarChart3, 
   Activity, 
   ArrowRight,
-  Target,
   Shield,
   Zap,
   CheckCircle,
@@ -19,7 +18,7 @@ const Services = ({ onContactClick }: ServicesProps) => {
   const services = [
     {
       icon: TrendingUp,
-      title: 'Intraday Trading Advisory',
+      title: 'Intraday Trading Service',
       description: 'Get accurate intraday trading calls for Nifty, Bank Nifty, and stocks with real-time market analysis and expert insights for maximum profit potential.',
       features: ['Real-time signals', 'Risk management', 'Market analysis', 'Expert support'],
       color: 'from-blue-500 to-blue-600',
@@ -28,7 +27,7 @@ const Services = ({ onContactClick }: ServicesProps) => {
     },
     {
       icon: BarChart3,
-      title: 'Futures & Options Advisory',
+      title: 'Futures & Options Services',
       description: 'Professional F&O trading strategies for Indian markets with comprehensive research and risk management techniques for Nifty & Bank Nifty options.',
       features: ['Options strategies', 'Futures guidance', 'Risk analysis', 'Portfolio optimization'],
       color: 'from-green-500 to-green-600',
@@ -37,8 +36,8 @@ const Services = ({ onContactClick }: ServicesProps) => {
     },
     {
       icon: Activity,
-      title: 'Swing Trading Advisory',
-      description: 'Medium-term trading strategies with detailed technical analysis for Indian stocks and market trend predictions for better returns.',
+      title: 'Commodity Trading Services',
+      description: 'Research-driven commodity trading recommendations across MCX with detailed technical analysis and market trend insights for better returns.',
       features: ['Technical analysis', 'Trend identification', 'Entry/exit signals', 'Market research'],
       color: 'from-purple-500 to-purple-600',
       bgColor: 'from-purple-50 to-purple-100',
@@ -77,14 +76,6 @@ const Services = ({ onContactClick }: ServicesProps) => {
           variants={containerVariants}
           className="text-center mb-20"
         >
-          <motion.div
-            variants={itemVariants}
-            className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600/10 to-indigo-600/10 border border-blue-200 rounded-full px-6 py-3 mb-8"
-          >
-            <Target className="w-5 h-5 text-blue-600" />
-            <span className="text-sm font-bold text-blue-600">Our Services</span>
-          </motion.div>
-
           <motion.h2
             variants={itemVariants}
             className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-4 sm:mb-6 md:mb-8"
@@ -99,7 +90,7 @@ const Services = ({ onContactClick }: ServicesProps) => {
             variants={itemVariants}
             className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed"
           >
-            We provide comprehensive stock market advisory services for Indian markets with SEBI registered strategies 
+            We provide comprehensive stock market research services for Indian markets with SEBI registered strategies 
             and expert market analysis to help you make informed trading decisions.
           </motion.p>
         </motion.div>
@@ -193,7 +184,7 @@ const Services = ({ onContactClick }: ServicesProps) => {
             <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-2 sm:mb-3 md:mb-4">Why Choose TradeStock?</h3>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-blue-100 max-w-3xl mx-auto">
               We combine cutting-edge technology with expert analysis to deliver 
-              the most accurate investment advice for Indian stock markets.
+              the most accurate trading advice for Indian stock markets.
             </p>
           </div>
           
@@ -216,8 +207,8 @@ const Services = ({ onContactClick }: ServicesProps) => {
               <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-white/20 rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 md:mb-6">
                 <Award className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
               </div>
-              <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-1.5 sm:mb-2 md:mb-3">5X Growth Potential</h4>
-              <p className="text-blue-100 text-xs sm:text-sm md:text-base">Proven track record of successful trades in Indian markets</p>
+              <h4 className="text-lg sm:text-xl md:text-2xl font-bold mb-1.5 sm:mb-2 md:mb-3">Research Based Analysis</h4>
+              <p className="text-blue-100 text-xs sm:text-sm md:text-base">In-depth research-driven analysis powering every call we share</p>
             </div>
           </div>
         </motion.div>

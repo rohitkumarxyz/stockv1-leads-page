@@ -22,19 +22,9 @@ interface FooterProps {
 const Footer = ({ onContactClick }: FooterProps) => {
   const quickLinks = [
     { name: 'Home', href: '#home' },
-    { name: 'Our Services', href: '#services' },
     { name: 'About Us', href: '#about' },
     { name: 'Contact Us', href: '#contact', isContact: true },
     { name: 'Privacy Policy', href: '/privacy', isRoute: true }
-  ];
-
-  const services = [
-    'Intraday Trading Advisory',
-    'Futures & Options Advisory',
-    'Swing Trading Advisory',
-    'Portfolio Management',
-    'Risk Management',
-    'Market Analysis'
   ];
 
   const socialLinks = [
@@ -74,7 +64,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
         >
           {/* Company Info */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
@@ -86,8 +76,8 @@ const Footer = ({ onContactClick }: FooterProps) => {
             
             <p className="text-gray-300 leading-relaxed mb-6">
               TradeStock is India's leading provider of comprehensive 
-              stock market advisory services. We specialize in delivering SEBI registered 
-              strategies and expert market analysis to help Indian investors make informed decisions 
+              stock market recommendation services. We specialize in delivering SEBI registered 
+              research and expert market analysis to help Indian investors make informed decisions 
               with our proven track record of success.
             </p>
 
@@ -142,24 +132,6 @@ const Footer = ({ onContactClick }: FooterProps) => {
             </ul>
           </motion.div>
 
-          {/* Services */}
-          <motion.div variants={itemVariants}>
-            <h4 className="text-xl font-semibold mb-6">Our Services</h4>
-            <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <a
-                    href="#services"
-                    className="text-gray-300 hover:text-primary-400 transition-colors duration-300 flex items-center space-x-2 group"
-                  >
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                    <span>{service}</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
           {/* Contact Info */}
           <motion.div variants={itemVariants}>
             <h4 className="text-xl font-semibold mb-6">Have queries?</h4>
@@ -168,7 +140,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
                 <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300">
-                    139 FCS software solutions sec 58, noida ghaziabad 201305
+                    1016, Gali No. 2, Bhoor Colony, Sector 29, Faridabad, Haryana, 121008
                   </p>
                 </div>
               </div>
@@ -186,10 +158,10 @@ const Footer = ({ onContactClick }: FooterProps) => {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
                 <a
-                  href="mailto:help.tradestock@gmail.com"
+                  href="mailto:chahatmangla.ra@gmail.com"
                   className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
                 >
-                  help.tradestock@gmail.com
+                  chahatmangla.ra@gmail.com
                 </a>
               </div>
             </div>
@@ -247,12 +219,12 @@ const Footer = ({ onContactClick }: FooterProps) => {
           <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
             <div className="text-gray-400 text-sm">
               <p className="mb-2">
-                <strong>Disclaimer:</strong> Trading in the stock market involves substantial risk of loss 
-                and is not suitable for all investors. The content provided is for educational purposes 
-                only and should not be considered as investment advice. Please consult a qualified financial advisor.
+                <strong>Disclaimer:</strong> Equity Investments and Trading are subjected to market risk. 
+                Please read all the schemes related documents carefully before investing. Consult your 
+                financial advisor before execution of any trade.
               </p>
               <p>
-                Copyright 2025, TradeStock Investment Advisory Service, All Rights Reserved. | 
+                Copyright 2025, TradeStock Research Services, All Rights Reserved. | 
                 Design And Developed by Webzo Technologies.
               </p>
             </div>
@@ -260,7 +232,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Star className="w-4 h-4 text-yellow-400" />
-                <span>Trusted by 15K+ Indian Traders</span>
+                <span>Trusted by 2K+ Indian Traders</span>
               </div>
             </div>
           </div>

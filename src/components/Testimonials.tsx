@@ -15,33 +15,27 @@ const Testimonials = ({ onContactClick }: TestimonialsProps) => {
     {
       name: 'Manoj Gupta',
       role: 'Business Owner',
-      content: 'Trade Stock has transformed my investment approach completely. Their expert analysis and timely calls have helped me achieve consistent profits. The team is professional and always available for guidance.',
-      rating: 5,
-      profit: '+₹2.5L',
-      duration: '6 months'
+      content: 'Trade Stock has transformed my investment approach completely. Their expert analysis and timely calls have helped me make informed decisions. The team is professional and always available for guidance.',
+      rating: 5
     },
     {
       name: 'Saloni Taneja',
       role: 'Trader',
-      content: 'I was skeptical about advisory services, but Trade Stock proved me wrong. Their research-backed strategies and risk management techniques have been game-changers for my portfolio.',
-      rating: 5,
-      profit: '+₹1.8L',
-      duration: '4 months'
+      content: 'I was skeptical about research services, but Trade Stock proved me wrong. Their research-backed strategies and risk management techniques have been game-changers for my portfolio.',
+      rating: 5
     },
     {
       name: 'Rahul Sharma',
       role: 'Trader',
-      content: 'The best investment advisory service I have ever used. Their intraday calls are highly accurate and the support team is exceptional. Highly recommended for serious traders.',
-      rating: 5,
-      profit: '+₹3.2L',
-      duration: '8 months'
+      content: 'The best stock research service I have ever used. Their intraday calls are highly accurate and the support team is exceptional. Highly recommended for serious traders.',
+      rating: 5
     }
   ];
 
   const stats = [
-    { icon: TrendingUp, value: '5X', label: 'Growth Potential' },
-    { icon: Shield, value: '15K+', label: 'Happy Clients' },
-    { icon: Target, value: '₹100Cr+', label: 'Total Returns' }
+    { icon: TrendingUp, value: '10K+', label: 'Hours of Research' },
+    { icon: Shield, value: '2K+', label: 'Happy Clients' },
+    { icon: Target, value: '1500+', label: 'Trades Executed' }
   ];
 
   const containerVariants = {
@@ -98,7 +92,7 @@ const Testimonials = ({ onContactClick }: TestimonialsProps) => {
             className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             Don't just take our word for it. Here's what our satisfied clients have to say 
-            about their experience with Trade Stock Investment Advisory Services.
+            about their experience with Trade Stock Research Services.
           </motion.p>
         </motion.div>
 
@@ -158,25 +152,13 @@ const Testimonials = ({ onContactClick }: TestimonialsProps) => {
               </p>
 
               {/* Client Info */}
-              <div className="flex items-center space-x-4 mb-4">
+              <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center">
                   <span className="text-white font-bold text-lg">{getInitials(testimonial.name)}</span>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
                   <p className="text-sm text-gray-600">{testimonial.role}</p>
-                </div>
-              </div>
-
-              {/* Performance Metrics */}
-              <div className="flex justify-between items-center pt-4 border-t border-gray-100">
-                <div className="text-center">
-                  <div className="text-lg font-bold text-green-600">{testimonial.profit}</div>
-                  <div className="text-xs text-gray-500">Profit</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-lg font-bold text-primary-600">{testimonial.duration}</div>
-                  <div className="text-xs text-gray-500">Duration</div>
                 </div>
               </div>
             </motion.div>
@@ -196,7 +178,7 @@ const Testimonials = ({ onContactClick }: TestimonialsProps) => {
               Ready to Join Our Success Stories?
             </h3>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Start your journey with Trade Stock and become part of our growing community of successful investors.
+              Start your journey with Trade Stock and become part of our growing community of successful traders.
             </p>
             <motion.button
               onClick={onContactClick}

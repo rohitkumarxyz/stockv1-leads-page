@@ -7,7 +7,6 @@ export interface FormSubmissionData {
   mobile: string;
   state: string;
   segment: string;
-  investment: string;
   privacy: boolean;
 }
 
@@ -37,7 +36,6 @@ export const sendFormSubmissionEmail = async (formData: FormSubmissionData) => {
       mobile: formData.mobile.trim(),
       state: formData.state.trim(),
       segment: formData.segment || '',
-      investment: formData.investment || '',
       privacy: Boolean(formData.privacy)
     };
 

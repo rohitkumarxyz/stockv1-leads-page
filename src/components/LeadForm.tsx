@@ -30,7 +30,6 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
     mobile: '',
     state: '',
     segment: '',
-    investment: '',
     privacy: false
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -275,24 +274,6 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
                     </select>
                   </div>
 
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
-                      Investment Amount
-                    </label>
-                    <select
-                      name="investment"
-                      value={formData.investment}
-                      onChange={handleInputChange}
-                      className="w-full px-3 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-300 text-sm"
-                    >
-                      <option value="">Select Amount</option>
-                      <option value="50k-1l">₹50K - ₹1L</option>
-                      <option value="1l-5l">₹1L - ₹5L</option>
-                      <option value="5l-10l">₹5L - ₹10L</option>
-                      <option value="10l+">₹10L+</option>
-                    </select>
-                  </div>
-
                   <div className="flex items-center space-x-3">
                     <input
                       type="checkbox"
@@ -342,7 +323,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
                   </div>
                   <div className="flex items-center space-x-1">
                     <Star className="w-4 h-4 text-yellow-500" />
-                    <span>5X Growth Potential</span>
+                    <span>NSE & BSE Listed Shares</span>
                   </div>
                 </div>
               </div>

@@ -29,7 +29,6 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
     mobile: '',
     state: '',
     segment: '',
-    investment: '',
     privacy: false
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -72,7 +71,6 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
           mobile: '',
           state: '',
           segment: '',
-          investment: '',
           privacy: false
         });
         // Navigate to thank you page after a short delay
@@ -91,10 +89,10 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
   };
 
   const stats = [
-    { icon: Users, value: '15K+', label: 'Happy Clients' },
-    { icon: TrendingUp, value: '5X', label: 'Growth Potential' },
+    { icon: Users, value: '2K+', label: 'Happy Clients' },
+    { icon: TrendingUp, value: '10K+', label: 'Hours of Research' },
     { icon: Award, value: '8+', label: 'Years Experience' },
-    { icon: Target, value: '₹100Cr+', label: 'Total Returns' }
+    { icon: Target, value: '1500+', label: 'Trades Executed' }
   ];
 
   return (
@@ -123,7 +121,7 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600/20 to-indigo-600/20 backdrop-blur-sm border border-blue-400/30 rounded-full px-6 py-3 mb-8"
             >
               <Star className="w-5 h-5 text-yellow-400" />
-              <span className="text-sm font-semibold">पहले कमाएं, फिर भुगतान करें</span>
+              <span className="text-sm font-semibold">Soch kar . Samjh kar . Nivesh kar</span>
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             </motion.div>
 
@@ -135,9 +133,9 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-4 sm:mb-6 leading-tight descender-safe"
               style={{ lineHeight: '1.2', wordSpacing: '0.05em', paddingBottom: '0.1em' }}
             >
-              <span className="block text-white mb-1 sm:mb-2 pb-1">Stock Market</span>
+              <span className="block text-white mb-1 sm:mb-2 pb-1">Research Based</span>
               <span className="block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent pb-1">
-                Advisory Services
+                Stock Tips & Recommendations
               </span>
             </motion.h1>
 
@@ -148,8 +146,8 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               className="text-base sm:text-lg md:text-xl text-blue-100 mb-6 sm:mb-8 leading-relaxed max-w-lg descender-safe"
               style={{ lineHeight: '1.6', paddingBottom: '0.1em' }}
             >
-              India's #1 Nifty & Bank Nifty Options Advisory with SEBI registered strategies. 
-              Get potential growth trading strategies with ₹50,000+ monthly returns.
+              Expert Equity, F&O, and Commodity tips with proven accuracy. Over 2000+ subscribers
+              trust us for daily intraday & positional calls.
             </motion.p>
 
             {/* Key Benefits */}
@@ -160,10 +158,10 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8"
             >
               {[
-                { icon: TrendingUp, text: '2 - 3 Calls Daily' },
+                { icon: TrendingUp, text: 'Research Based Calls' },
                 { icon: Shield, text: 'SEBI Registered' },
                 { icon: 'whatsapp', text: 'WhatsApp Support' },
-                { icon: BarChart3, text: '5X Growth Potential' }
+                { icon: BarChart3, text: 'Real Time Alerts' }
               ].map((benefit, index) => (
                 <motion.div
                   key={index}
@@ -260,7 +258,7 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
                   Get Expert Stock Market Advice
                 </h3>
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base">
-                  Join 15K+ successful Indian traders
+                  Join 2K+ successful Indian traders
                 </p>
                 <div className="flex items-center justify-center space-x-3 sm:space-x-4 mt-3 sm:mt-4">
                   <div className="flex items-center space-x-0.5 sm:space-x-1">
@@ -328,41 +326,22 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
                   />
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 md:gap-4">
-                  <div>
-                    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
-                      Trading Segment
-                    </label>
-                    <select
-                      name="segment"
-                      value={formData.segment}
-                      onChange={handleInputChange}
-                      className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
-                    >
-                      <option value="">Select Segment</option>
-                      <option value="equity">Equity</option>
-                      <option value="futures">Futures</option>
-                      <option value="options">Options</option>
-                      <option value="commodity">Commodity</option>
-                    </select>
-                  </div>
-                  <div>
-                    <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
-                      Investment Amount
-                    </label>
-                    <select
-                      name="investment"
-                      value={formData.investment}
-                      onChange={handleInputChange}
-                      className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
-                    >
-                      <option value="">Select Amount</option>
-                      <option value="50k-1l">₹50K - ₹1L</option>
-                      <option value="1l-5l">₹1L - ₹5L</option>
-                      <option value="5l-10l">₹5L - ₹10L</option>
-                      <option value="10l+">₹10L+</option>
-                    </select>
-                  </div>
+                <div>
+                  <label className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5 sm:mb-2">
+                    Trading Segment
+                  </label>
+                  <select
+                    name="segment"
+                    value={formData.segment}
+                    onChange={handleInputChange}
+                    className="w-full px-2.5 sm:px-3 py-2 sm:py-2.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-300 bg-white text-xs sm:text-sm"
+                  >
+                    <option value="">Select Segment</option>
+                    <option value="equity">Equity</option>
+                    <option value="futures">Futures</option>
+                    <option value="options">Options</option>
+                    <option value="commodity">Commodity</option>
+                  </select>
                 </div>
 
                 <div className="flex items-start space-x-2 sm:space-x-3">
@@ -446,7 +425,7 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="w-4 h-4 text-green-500" />
-                    <span>5X Growth Potential</span>
+                    <span>NSE & BSE Listed Shares</span>
                   </div>
                 </div>
               </div>

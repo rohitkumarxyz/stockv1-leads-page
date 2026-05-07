@@ -4,7 +4,6 @@ export interface FormData {
   mobile: string;
   state: string;
   segment: string;
-  investment: string;
   privacy: boolean;
 }
 
@@ -14,7 +13,6 @@ export interface ValidationErrors {
   mobile?: string;
   state?: string;
   segment?: string;
-  investment?: string;
   privacy?: string;
 }
 
@@ -54,11 +52,6 @@ export const validateForm = (formData: FormData): ValidationErrors => {
     errors.segment = 'Please select a valid trading segment';
   }
 
-  // Investment validation (optional)
-  if (formData.investment && formData.investment.trim() === '') {
-    errors.investment = 'Please select a valid investment amount';
-  }
-
   // Privacy policy validation
   if (!formData.privacy) {
     errors.privacy = 'You must agree to the Privacy Policy and Terms & Conditions';
@@ -78,7 +71,6 @@ export const formatFormData = (formData: FormData) => {
     mobile: formData.mobile.trim(),
     city: formData.state.trim(),
     segment: formData.segment.trim() || 'Not specified',
-    investment: formData.investment.trim() || 'Not specified',
     privacy: formData.privacy,
     submittedAt: new Date().toISOString(),
   };

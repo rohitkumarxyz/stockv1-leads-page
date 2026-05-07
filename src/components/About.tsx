@@ -12,12 +12,11 @@ import {
 
 const About = () => {
   const stats = [
-    { number: '15K+', label: 'Happy Clients', icon: Users },
-    { number: '5X', label: 'Growth Potential', icon: Target },
+    { number: '2K+', label: 'Happy Clients', icon: Users },
+    { number: '10K+', label: 'Hours of Research', icon: Target },
     { number: '8+', label: 'Years Experience', icon: Award },
-    { number: '10K+', label: 'Trades Executed', icon: BarChart3 }
+    { number: '1500+', label: 'Trades Executed', icon: BarChart3 }
   ];
-
   const features = [
     {
       icon: TrendingUp,
@@ -36,8 +35,8 @@ const About = () => {
     },
     {
       icon: Target,
-      title: 'Personalized Strategies',
-      description: 'Customized investment strategies tailored to your risk profile and financial goals.'
+      title: 'SEBI Registered',
+      description: 'We operate as a SEBI Registered Research Analyst (INH000018577) ensuring transparent, ethical, and fully compliant research services.'
     }
   ];
 
@@ -96,8 +95,8 @@ const About = () => {
               variants={itemVariants}
               className="text-base sm:text-lg text-gray-600 mb-6 sm:mb-8 leading-relaxed"
             >
-              Trade Stock Investment Advisory Service is a leading provider of comprehensive 
-              stock market advisory services. We specialize in delivering research-backed 
+              Trade Stock Research Services is a leading provider of comprehensive 
+              stock market recommendation services. We specialize in delivering research-backed 
               insights and expert market analysis to help investors make informed decisions.
             </motion.p>
 
