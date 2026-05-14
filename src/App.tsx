@@ -11,6 +11,9 @@ import Footer from './components/Footer';
 import LeadForm, { type LeadFormRef } from './components/LeadForm';
 import ThankYou from './components/ThankYou';
 import Privacy from './components/Privacy';
+import CompliancePage from './components/CompliancePage';
+import DisclosuresPage from './components/DisclosuresPage';
+import DisclaimerPage from './components/DisclaimerPage';
 
 function HomePage() {
   const leadFormRef = useRef<LeadFormRef>(null);
@@ -50,6 +53,9 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/thank-you" element={<ThankYou />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/compliance" element={<CompliancePage />} />
+        <Route path="/disclosures" element={<DisclosuresPage />} />
+        <Route path="/disclaimer" element={<DisclaimerPage />} />
       </Routes>
     </Router>
   );

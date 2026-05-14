@@ -11,6 +11,7 @@ import {
 import PhoneInput from './PhoneInput';
 import CitySelect from './CitySelect';
 import { sendFormSubmissionEmail } from '../services/emailService';
+import { site } from '../config/site';
 import type { FormSubmissionData } from '../services/emailService';
 import { testEmailConfiguration } from '../utils/emailTest';
 
@@ -92,7 +93,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
       <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex flex-col space-y-2 sm:space-y-3">
         {/* WhatsApp Button */}
         <motion.a
-          href="https://wa.me/8527506837"
+          href={`https://wa.me/${site.whatsappE164}`}
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.1 }}
@@ -104,7 +105,7 @@ const LeadForm = forwardRef<LeadFormRef, LeadFormProps>(({ onFormSuccess }, ref)
 
         {/* Call Button */}
         <motion.a
-          href="tel:8527506837"
+          href={`tel:${site.salesPhone}`}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           className="w-12 h-12 sm:w-14 sm:h-14 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300"

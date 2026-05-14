@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
+import {
+  Phone,
+  Mail,
+  MapPin,
   ArrowRight,
   TrendingUp,
   Shield,
@@ -12,26 +12,20 @@ import {
   Facebook,
   Twitter,
   Linkedin,
-  Instagram
+  Instagram,
 } from 'lucide-react';
+import { site } from '../config/site';
 
 interface FooterProps {
   onContactClick?: () => void;
 }
 
 const Footer = ({ onContactClick }: FooterProps) => {
-  const quickLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact Us', href: '#contact', isContact: true },
-    { name: 'Privacy Policy', href: '/privacy', isRoute: true }
-  ];
-
   const socialLinks = [
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' }
+    { icon: Instagram, href: '#', label: 'Instagram' },
   ];
 
   const containerVariants = {
@@ -39,9 +33,9 @@ const Footer = ({ onContactClick }: FooterProps) => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants = {
@@ -50,35 +44,33 @@ const Footer = ({ onContactClick }: FooterProps) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
+
+  const footerLinkClass =
+    'text-gray-300 hover:text-primary-400 transition-colors duration-300 flex items-center space-x-2 group';
 
   return (
     <footer className="bg-gray-900 text-white">
-      {/* Main Footer */}
       <div className="container mx-auto px-4 py-16">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           variants={containerVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10"
         >
-          {/* Company Info */}
           <motion.div variants={itemVariants} className="lg:col-span-1">
             <div className="mb-6">
-              <h1 className="text-2xl sm:text-3xl font-bold text-white">
-                TradeStock
-              </h1>
+              <h1 className="text-2xl sm:text-3xl font-bold text-white">{site.brandName}</h1>
             </div>
-            
+
             <p className="text-gray-300 leading-relaxed mb-6">
-              TradeStock is India's leading provider of comprehensive 
-              stock market recommendation services. We specialize in delivering SEBI registered 
-              research and expert market analysis to help Indian investors make informed decisions 
-              with our proven track record of success.
+              {site.brandName} is India&apos;s leading provider of comprehensive stock market recommendation services. We
+              specialize in delivering SEBI registered research and expert market analysis to help Indian investors make
+              informed decisions with our proven track record of success.
             </p>
 
             <div className="flex space-x-4">
@@ -96,78 +88,115 @@ const Footer = ({ onContactClick }: FooterProps) => {
             </div>
           </motion.div>
 
-          {/* Quick Links */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-xl font-semibold mb-6">Company</h4>
+            <h4 className="text-xl font-semibold mb-6">Services &amp; packages</h4>
             <ul className="space-y-3">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  {link.isContact ? (
-                    <button
-                      onClick={onContactClick}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-300 flex items-center space-x-2 group"
-                    >
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      <span>{link.name}</span>
-                    </button>
-                  ) : link.isRoute ? (
-                    <Link
-                      to={link.href}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-300 flex items-center space-x-2 group"
-                    >
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      <span>{link.name}</span>
-                    </Link>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-gray-300 hover:text-primary-400 transition-colors duration-300 flex items-center space-x-2 group"
-                    >
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
-                      <span>{link.name}</span>
-                    </a>
-                  )}
-                </li>
-              ))}
+              <li>
+                <a href="/#home" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Home</span>
+                </a>
+              </li>
+              <li>
+                <a href="/#services" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Services</span>
+                </a>
+              </li>
+              <li>
+                <a href="/#packages" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Research packages</span>
+                </a>
+              </li>
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div variants={itemVariants}>
-            <h4 className="text-xl font-semibold mb-6">Have queries?</h4>
+            <h4 className="text-xl font-semibold mb-6">Company</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="/#about" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>About Us</span>
+                </a>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={onContactClick}
+                  className={`${footerLinkClass} text-left w-full`}
+                >
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Contact Us</span>
+                </button>
+              </li>
+              <li>
+                <Link to="/compliance" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Compliance</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/disclosures" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Disclosures</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/disclaimer" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Disclaimer</span>
+                </Link>
+              </li>
+            </ul>
+          </motion.div>
+
+          <motion.div variants={itemVariants}>
+            <h4 className="text-xl font-semibold mb-6">Legal</h4>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/privacy" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Privacy Policy</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/disclaimer" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Terms &amp; risk disclosure</span>
+                </Link>
+              </li>
+            </ul>
+
+            <h4 className="text-xl font-semibold mb-6 mt-10">Have queries?</h4>
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
-                <div>
-                  <p className="text-gray-300">
-                    1016, Gali No. 2, Bhoor Colony, Sector 29, Faridabad, Haryana, 121008
-                  </p>
-                </div>
+                <p className="text-gray-300">{site.addressLine}</p>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
-                <a
-                  href="tel:8527506837"
-                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
-                >
-                  +91 8527506837
+                <a href={`tel:${site.salesPhone}`} className="text-gray-300 hover:text-primary-400 transition-colors duration-300">
+                  <span className="text-gray-500 text-xs block sm:inline sm:mr-1">Sales</span>
+                  {site.salesPhoneDisplay}
                 </a>
               </div>
-              
+
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400 flex-shrink-0" />
                 <a
-                  href="mailto:chahatmangla.ra@gmail.com"
-                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300"
+                  href={`mailto:${site.email}`}
+                  className="text-gray-300 hover:text-primary-400 transition-colors duration-300 break-all"
                 >
-                  chahatmangla.ra@gmail.com
+                  {site.email}
                 </a>
               </div>
             </div>
 
-            {/* CTA Button */}
             <motion.button
+              type="button"
               onClick={onContactClick}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -179,7 +208,6 @@ const Footer = ({ onContactClick }: FooterProps) => {
           </motion.div>
         </motion.div>
 
-        {/* Features Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -187,52 +215,88 @@ const Footer = ({ onContactClick }: FooterProps) => {
           transition={{ duration: 0.8 }}
           className="mt-16 pt-8 border-t border-gray-800"
         >
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 text-sm text-gray-300">
+            <div>
+              <h4 className="font-semibold text-white mb-3">Principal officer</h4>
+              <p>
+                <strong className="text-gray-200">Name:</strong> {site.principalName}
+              </p>
+              <p>
+                <strong className="text-gray-200">Email:</strong>{' '}
+                <a href={`mailto:${site.email}`} className="hover:text-primary-400">
+                  {site.email}
+                </a>
+              </p>
+              <p>
+                <strong className="text-gray-200">Phone (sales):</strong> {site.salesPhoneDisplay}
+              </p>
+            </div>
+            <div>
+              <h4 className="font-semibold text-white mb-3">Compliance officer</h4>
+              <p>
+                <strong className="text-gray-200">Name:</strong> {site.complianceOfficerName}
+              </p>
+              <p>
+                <strong className="text-gray-200">Email:</strong>{' '}
+                <a href={`mailto:${site.email}`} className="hover:text-primary-400">
+                  {site.email}
+                </a>
+              </p>
+              <p>
+                <strong className="text-gray-200">Phone (sales):</strong> {site.salesPhoneDisplay}
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center border-t border-gray-800 pt-10">
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4">
                 <Shield className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">SEBI Registered</h4>
-              <p className="text-gray-400 text-sm">All strategies are SEBI registered and compliant</p>
+              <h4 className="text-lg font-semibold mb-2">SEBI registered</h4>
+              <p className="text-gray-400 text-sm">RA registration no. {site.sebiRegistrationNo}</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Optimized Risk-Reward Ratio</h4>
-              <p className="text-gray-400 text-sm">Proven track record of successful trades</p>
+              <h4 className="text-lg font-semibold mb-2">BSE enlistment</h4>
+              <p className="text-gray-400 text-sm">BSE Enlistment No. {site.bseEnlistmentNo}</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4">
                 <Target className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">Expert Support</h4>
-              <p className="text-gray-400 text-sm">24/7 expert guidance and support</p>
+              <h4 className="text-lg font-semibold mb-2">Expert support</h4>
+              <p className="text-gray-400 text-sm">Research and assistance during market hours</p>
             </div>
           </div>
         </motion.div>
       </div>
 
-      {/* Bottom Footer */}
       <div className="border-t border-gray-800">
         <div className="container mx-auto px-4 py-6">
-          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="text-gray-400 text-sm">
+          <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 gap-4">
+            <div className="text-gray-400 text-sm text-center sm:text-left">
               <p className="mb-2">
-                <strong>Disclaimer:</strong> Equity Investments and Trading are subjected to market risk. 
-                Please read all the schemes related documents carefully before investing. Consult your 
-                financial advisor before execution of any trade.
+                <strong>Disclaimer:</strong> Equity investments and trading are subject to market risk. Please read all
+                scheme-related documents carefully before investing. Consult your financial advisor before execution of
+                any trade.
               </p>
               <p>
-                Copyright 2025, TradeStock Research Services, All Rights Reserved. | 
-                Design And Developed by Webzo Technologies.
+                Copyright {new Date().getFullYear()}, {site.companyLegalName}. All rights reserved. | Design and
+                developed by Webzo Technologies.
+              </p>
+              <p className="mt-2 text-xs text-gray-500">
+                SEBI Registered Research Analyst | Registration No: {site.sebiRegistrationNo} | BSE Enlistment No.:{' '}
+                {site.bseEnlistmentNo}
               </p>
             </div>
-            
-            <div className="flex items-center space-x-4">
+
+            <div className="flex items-center space-x-4 flex-shrink-0">
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 <Star className="w-4 h-4 text-yellow-400" />
-                <span>Trusted by 2K+ Indian Traders</span>
+                <span>Trusted by 2K+ Indian traders</span>
               </div>
             </div>
           </div>

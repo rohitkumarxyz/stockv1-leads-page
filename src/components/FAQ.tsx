@@ -15,6 +15,7 @@ import CitySelect from './CitySelect';
 import { sendFormSubmissionEmail } from '../services/emailService';
 import type { FormSubmissionData } from '../services/emailService';
 import { testEmailConfiguration } from '../utils/emailTest';
+import { site } from '../config/site';
 
 interface FAQProps {
   onFormSuccess: () => void;
@@ -467,7 +468,7 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Phone className="w-5 h-5 text-primary-600" />
-                    <span>8527506837</span>
+                    <span>{site.salesPhoneDisplay} (sales)</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Mail className="w-5 h-5 text-primary-600" />

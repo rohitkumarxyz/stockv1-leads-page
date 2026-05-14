@@ -7,7 +7,9 @@ import {
   TrendingUp,
   BarChart3,
   Activity,
+  CreditCard,
 } from 'lucide-react';
+import { site } from '../config/site';
 
 interface PackagesProps {
   onContactClick: () => void;
@@ -17,6 +19,7 @@ type Plan = {
   name: string;
   price: string;
   popular?: boolean;
+  paymentUrl: string;
 };
 
 type ServiceTab = {
@@ -51,11 +54,32 @@ const Packages = ({ onContactClick }: PackagesProps) => {
         'Risk management guidance',
       ],
       plans: [
-        { name: 'Weekly', price: '₹2,999' },
-        { name: 'Monthly', price: '₹12,800' },
-        { name: 'Quarterly', price: '₹32,000' },
-        { name: 'Half Yearly', price: '₹48,000' },
-        { name: 'Yearly', price: '₹64,000', popular: true },
+        {
+          name: 'Weekly',
+          price: '₹2,999',
+          paymentUrl: 'https://superprofile.bio/vp/equity-weekly-service',
+        },
+        {
+          name: 'Monthly',
+          price: '₹12,800',
+          paymentUrl: 'https://superprofile.bio/vp/equity-monthly-service',
+        },
+        {
+          name: 'Quarterly',
+          price: '₹32,000',
+          paymentUrl: 'https://superprofile.bio/vp/equity-quarterly-service',
+        },
+        {
+          name: 'Half Yearly',
+          price: '₹48,000',
+          paymentUrl: 'https://superprofile.bio/vp/equity-half-yearly-service',
+        },
+        {
+          name: 'Yearly',
+          price: '₹64,000',
+          popular: true,
+          paymentUrl: 'https://superprofile.bio/vp/equity-yearly-service',
+        },
       ],
     },
     {
@@ -74,11 +98,32 @@ const Packages = ({ onContactClick }: PackagesProps) => {
         'Expert market analysis',
       ],
       plans: [
-        { name: 'Weekly', price: '₹2,999' },
-        { name: 'Monthly', price: '₹15,000' },
-        { name: 'Quarterly', price: '₹40,000' },
-        { name: 'Half Yearly', price: '₹75,000' },
-        { name: 'Yearly', price: '₹1,20,000', popular: true },
+        {
+          name: 'Weekly',
+          price: '₹2,999',
+          paymentUrl: 'https://superprofile.bio/vp/futures---options-weekly-service',
+        },
+        {
+          name: 'Monthly',
+          price: '₹15,000',
+          paymentUrl: 'https://superprofile.bio/vp/futures---options-monthly-service',
+        },
+        {
+          name: 'Quarterly',
+          price: '₹40,000',
+          paymentUrl: 'https://superprofile.bio/vp/futures---options-quarterly-service',
+        },
+        {
+          name: 'Half Yearly',
+          price: '₹75,000',
+          paymentUrl: 'https://superprofile.bio/vp/futures---options-half-yearly-services',
+        },
+        {
+          name: 'Yearly',
+          price: '₹1,20,000',
+          popular: true,
+          paymentUrl: 'https://superprofile.bio/vp/futures---options-yearly-service',
+        },
       ],
     },
     {
@@ -97,11 +142,32 @@ const Packages = ({ onContactClick }: PackagesProps) => {
         'Risk management guidance',
       ],
       plans: [
-        { name: 'Weekly', price: '₹3,499' },
-        { name: 'Monthly', price: '₹16,000' },
-        { name: 'Quarterly', price: '₹45,000' },
-        { name: 'Half Yearly', price: '₹80,000' },
-        { name: 'Yearly', price: '₹1,25,000', popular: true },
+        {
+          name: 'Weekly',
+          price: '₹3,499',
+          paymentUrl: 'https://superprofile.bio/vp/commodity-weekly-service',
+        },
+        {
+          name: 'Monthly',
+          price: '₹16,000',
+          paymentUrl: 'https://superprofile.bio/vp/commodity-monthly-service',
+        },
+        {
+          name: 'Quarterly',
+          price: '₹45,000',
+          paymentUrl: 'https://superprofile.bio/vp/commodity-quarterly-service',
+        },
+        {
+          name: 'Half Yearly',
+          price: '₹80,000',
+          paymentUrl: 'https://superprofile.bio/vp/commodity-half-yearly-service',
+        },
+        {
+          name: 'Yearly',
+          price: '₹1,25,000',
+          popular: true,
+          paymentUrl: 'https://superprofile.bio/vp/commodity-yearly-service',
+        },
       ],
     },
   ];
@@ -262,7 +328,18 @@ const Packages = ({ onContactClick }: PackagesProps) => {
 
                 <div className="flex flex-col space-y-2 mt-auto">
                   <motion.a
-                    href="https://wa.me/8527506837"
+                    href={plan.paymentUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    className={`w-full bg-gradient-to-r ${activeService.color} text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm`}
+                  >
+                    <CreditCard className="w-3 h-3 sm:w-4 sm:h-4" />
+                    <span>Pay &amp; subscribe</span>
+                  </motion.a>
+                  <motion.a
+                    href={`https://wa.me/${site.whatsappE164}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}
@@ -274,9 +351,10 @@ const Packages = ({ onContactClick }: PackagesProps) => {
                   </motion.a>
                   <motion.button
                     onClick={onContactClick}
+                    type="button"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`w-full bg-gradient-to-r ${activeService.color} text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm`}
+                    className="w-full border-2 border-gray-200 hover:border-gray-300 text-gray-800 font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm"
                   >
                     <span>Enquiry Now</span>
                     <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />

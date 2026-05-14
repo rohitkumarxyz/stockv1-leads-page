@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { site } from '../config/site';
 import { 
   TrendingUp, 
   BarChart3, 
@@ -147,7 +148,7 @@ const Services = ({ onContactClick }: ServicesProps) => {
 
                 <div className="flex flex-col space-y-2 sm:space-y-3">
                   <motion.a
-                    href="https://wa.me/8527506837"
+                    href={`https://wa.me/${site.whatsappE164}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.02 }}

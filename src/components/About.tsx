@@ -9,6 +9,7 @@ import {
   Zap,
   CheckCircle
 } from 'lucide-react';
+import { site } from '../config/site';
 
 const About = () => {
   const stats = [
@@ -36,7 +37,7 @@ const About = () => {
     {
       icon: Target,
       title: 'SEBI Registered',
-      description: 'We operate as a SEBI Registered Research Analyst (INH000018577) ensuring transparent, ethical, and fully compliant research services.'
+      description: `We operate as a SEBI Registered Research Analyst (${site.sebiRegistrationNo}) with BSE Enlistment No. ${site.bseEnlistmentNo}, ensuring transparent, ethical, and fully compliant research services.`
     }
   ];
 
