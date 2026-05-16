@@ -21,7 +21,7 @@ const Privacy = () => {
     <div className="min-h-screen bg-white">
       <Header onContactClick={handleContactClick} />
       
-      <div className="pt-32 pb-16">
+      <main className="legal-page-main pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Header */}
           <motion.div
@@ -290,14 +290,14 @@ const Privacy = () => {
                   If you have any questions about this Privacy Policy, You can contact us:
                 </p>
                 <p className="text-gray-700 leading-relaxed">
-                  By email: <a href="mailto:chahatmangla.ra@gmail.com" className="text-blue-600 hover:text-blue-800 underline">chahatmangla.ra@gmail.com</a>
+                  By email: <a href="mailto:help.tradestock@gmail.com" className="text-blue-600 hover:text-blue-800 underline">help.tradestock@gmail.com</a>
                 </p>
               </section>
 
             </div>
           </motion.div>
         </div>
-      </div>
+      </main>
 
       <Footer onContactClick={handleContactClick} />
     </div>

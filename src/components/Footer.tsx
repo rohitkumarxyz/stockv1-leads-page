@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import {
   Phone,
   Mail,
-  MapPin,
   ArrowRight,
   TrendingUp,
   Shield,
@@ -167,19 +166,25 @@ const Footer = ({ onContactClick }: FooterProps) => {
                   <span>Terms &amp; risk disclosure</span>
                 </Link>
               </li>
+              <li>
+                <Link to="/investor-charter" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Investor Charter</span>
+                </Link>
+              </li>
+              <li>
+                <Link to="/grievance-board" className={footerLinkClass}>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                  <span>Grievance Board</span>
+                </Link>
+              </li>
             </ul>
 
             <h4 className="text-xl font-semibold mb-6 mt-10">Have queries?</h4>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300">{site.addressLine}</p>
-              </div>
-
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400 flex-shrink-0" />
                 <a href={`tel:${site.salesPhone}`} className="text-gray-300 hover:text-primary-400 transition-colors duration-300">
-                  <span className="text-gray-500 text-xs block sm:inline sm:mr-1">Sales</span>
                   {site.salesPhoneDisplay}
                 </a>
               </div>
@@ -223,12 +228,18 @@ const Footer = ({ onContactClick }: FooterProps) => {
               </p>
               <p>
                 <strong className="text-gray-200">Email:</strong>{' '}
-                <a href={`mailto:${site.email}`} className="hover:text-primary-400">
-                  {site.email}
+                <a href={`mailto:${site.principalEmail}`} className="hover:text-primary-400">
+                  {site.principalEmail}
                 </a>
               </p>
               <p>
-                <strong className="text-gray-200">Phone (sales):</strong> {site.salesPhoneDisplay}
+                <strong className="text-gray-200">Phone:</strong>{' '}
+                <a href={`tel:${site.officerPhone}`} className="hover:text-primary-400">
+                  {site.officerPhoneDisplay}
+                </a>
+              </p>
+              <p>
+                <strong className="text-gray-200">Address:</strong> {site.addressLine}
               </p>
             </div>
             <div>
@@ -238,12 +249,18 @@ const Footer = ({ onContactClick }: FooterProps) => {
               </p>
               <p>
                 <strong className="text-gray-200">Email:</strong>{' '}
-                <a href={`mailto:${site.email}`} className="hover:text-primary-400">
-                  {site.email}
+                <a href={`mailto:${site.complianceOfficerEmail}`} className="hover:text-primary-400">
+                  {site.complianceOfficerEmail}
                 </a>
               </p>
               <p>
-                <strong className="text-gray-200">Phone (sales):</strong> {site.salesPhoneDisplay}
+                <strong className="text-gray-200">Phone:</strong>{' '}
+                <a href={`tel:${site.officerPhone}`} className="hover:text-primary-400">
+                  {site.officerPhoneDisplay}
+                </a>
+              </p>
+              <p>
+                <strong className="text-gray-200">Address:</strong> {site.addressLine}
               </p>
             </div>
           </div>
@@ -260,8 +277,8 @@ const Footer = ({ onContactClick }: FooterProps) => {
               <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4">
                 <TrendingUp className="w-6 h-6 text-white" />
               </div>
-              <h4 className="text-lg font-semibold mb-2">BSE enlistment</h4>
-              <p className="text-gray-400 text-sm">BSE Enlistment No. {site.bseEnlistmentNo}</p>
+              <h4 className="text-lg font-semibold mb-2">BSE enlisted</h4>
+              <p className="text-gray-400 text-sm">BSE Enlisted No. {site.bseEnlistmentNo}</p>
             </div>
             <div className="flex flex-col items-center">
               <div className="w-12 h-12 bg-gradient-to-r from-primary-500 to-secondary-500 rounded-full flex items-center justify-center mb-4">
@@ -288,7 +305,7 @@ const Footer = ({ onContactClick }: FooterProps) => {
                 developed by Webzo Technologies.
               </p>
               <p className="mt-2 text-xs text-gray-500">
-                SEBI Registered Research Analyst | Registration No: {site.sebiRegistrationNo} | BSE Enlistment No.:{' '}
+                SEBI Registered Research Analyst | Registration No: {site.sebiRegistrationNo} | BSE Enlisted No.:{' '}
                 {site.bseEnlistmentNo}
               </p>
             </div>

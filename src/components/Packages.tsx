@@ -271,14 +271,16 @@ const Packages = ({ onContactClick }: PackagesProps) => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.35 }}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 sm:gap-5 md:gap-6"
           >
             {activeService.plans.map((plan) => (
               <motion.div
                 key={plan.name}
                 whileHover={{ y: -8 }}
-                className={`relative bg-white rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${
-                  plan.popular ? `${activeService.borderColor} lg:scale-105` : 'border-gray-100'
+                className={`relative min-w-0 w-full bg-white rounded-2xl p-4 sm:p-5 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-300 border-2 ${
+                  plan.popular
+                    ? `${activeService.borderColor} ring-2 ring-offset-2 ${activeService.ringColor}`
+                    : 'border-gray-100'
                 } flex flex-col`}
               >
                 {plan.popular && (
@@ -326,39 +328,25 @@ const Packages = ({ onContactClick }: PackagesProps) => {
                   ))}
                 </div>
 
-                <div className="flex flex-col space-y-2 mt-auto">
-                  <motion.a
+                <div className="mt-auto w-full min-w-0 flex flex-col gap-2 sm:gap-2.5">
+                  <a
                     href={plan.paymentUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`w-full bg-gradient-to-r ${activeService.color} text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm`}
+                    className={`inline-flex w-full min-w-0 max-w-full box-border items-center justify-center gap-1.5 sm:gap-2 rounded-lg bg-gradient-to-r ${activeService.color} px-3 py-2.5 sm:px-4 sm:py-3 min-h-[44px] sm:min-h-[48px] text-xs sm:text-sm font-semibold text-white shadow-md transition-colors duration-300 hover:opacity-95 active:opacity-90 touch-manipulation`}
                   >
-                    <CreditCard className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>Pay &amp; subscribe</span>
-                  </motion.a>
-                  <motion.a
+                    <CreditCard className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" aria-hidden />
+                    <span className="text-center leading-tight">Pay &amp; subscribe</span>
+                  </a>
+                  <a
                     href={`https://wa.me/${site.whatsappE164}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm"
+                    className="inline-flex w-full min-w-0 max-w-full box-border items-center justify-center gap-1.5 sm:gap-2 rounded-lg bg-green-600 px-3 py-2.5 sm:px-4 sm:py-3 min-h-[44px] sm:min-h-[48px] text-xs sm:text-sm font-semibold text-white shadow-md transition-colors duration-300 hover:bg-green-700 active:bg-green-800 touch-manipulation"
                   >
-                    <img src="/whatsapp.png" alt="WhatsApp" className="w-3 h-3 sm:w-4 sm:h-4" />
-                    <span>Connect Now</span>
-                  </motion.a>
-                  <motion.button
-                    onClick={onContactClick}
-                    type="button"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className="w-full border-2 border-gray-200 hover:border-gray-300 text-gray-800 font-semibold py-2 sm:py-2.5 px-3 sm:px-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-xs sm:text-sm"
-                  >
-                    <span>Enquiry Now</span>
-                    <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4" />
-                  </motion.button>
+                    <img src="/whatsapp.png" alt="" className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0" />
+                    <span className="text-center leading-tight">Connect Now</span>
+                  </a>
                 </div>
               </motion.div>
             ))}

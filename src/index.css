@@ -182,6 +182,29 @@ body {
   }
 }
 
+/* Fixed header offset — top bar + nav (matches Header.tsx) */
+.legal-page-main {
+  padding-top: 7.25rem;
+}
+
+@media (min-width: 640px) {
+  .legal-page-main {
+    padding-top: 8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .legal-page-main {
+    padding-top: 8.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .legal-page-main {
+    padding-top: 9.25rem;
+  }
+}
+
 /* Header spacing fix */
 .hero-section {
   margin-top: 7rem;

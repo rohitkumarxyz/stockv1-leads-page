@@ -35,14 +35,14 @@ const CompliancePage = () => {
           </li>
           <li>
             <strong>Email:</strong>{' '}
-            <a href={`mailto:${site.email}`} className="text-blue-600 hover:underline">
-              {site.email}
+            <a href={`mailto:${site.principalEmail}`} className="text-blue-600 hover:underline">
+              {site.principalEmail}
             </a>
           </li>
           <li>
-            <strong>Phone (sales):</strong>{' '}
-            <a href={`tel:${site.salesPhone}`} className="text-blue-600 hover:underline">
-              {site.salesPhoneDisplay}
+            <strong>Phone:</strong>{' '}
+            <a href={`tel:${site.officerPhone}`} className="text-blue-600 hover:underline">
+              {site.officerPhoneDisplay}
             </a>
           </li>
           <li>
@@ -59,15 +59,18 @@ const CompliancePage = () => {
           </li>
           <li>
             <strong>Email:</strong>{' '}
-            <a href={`mailto:${site.email}`} className="text-blue-600 hover:underline">
-              {site.email}
+            <a href={`mailto:${site.complianceOfficerEmail}`} className="text-blue-600 hover:underline">
+              {site.complianceOfficerEmail}
             </a>
           </li>
           <li>
-            <strong>Phone (sales):</strong>{' '}
-            <a href={`tel:${site.salesPhone}`} className="text-blue-600 hover:underline">
-              {site.salesPhoneDisplay}
+            <strong>Phone:</strong>{' '}
+            <a href={`tel:${site.officerPhone}`} className="text-blue-600 hover:underline">
+              {site.officerPhoneDisplay}
             </a>
+          </li>
+          <li>
+            <strong>Address:</strong> {site.addressLine}
           </li>
         </ul>
       </section>
@@ -75,8 +78,15 @@ const CompliancePage = () => {
       <section className="space-y-3">
         <h2 className="text-xl font-bold text-gray-900">Grievances</h2>
         <p>
-          For service-related queries or complaints, please write to {site.email} or call {site.salesPhoneDisplay}{' '}
-          (sales). You may
+          For service-related queries or complaints, please write to{' '}
+          <a href={`mailto:${site.complianceOfficerEmail}`} className="text-blue-600 hover:underline">
+            {site.complianceOfficerEmail}
+          </a>{' '}
+          or call{' '}
+          <a href={`tel:${site.officerPhone}`} className="text-blue-600 hover:underline">
+            {site.officerPhoneDisplay}
+          </a>
+          . You may
           also use the SEBI SCORES portal for filing complaints as per SEBI guidelines.
         </p>
       </section>

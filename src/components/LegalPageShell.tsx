@@ -29,7 +29,7 @@ const LegalPageShell = ({ title, lastUpdated, icon: Icon, children }: LegalPageS
     <div className="min-h-screen bg-white">
       <Header onContactClick={handleContactClick} />
 
-      <div className="pt-32 pb-16">
+      <main className="legal-page-main pb-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ const LegalPageShell = ({ title, lastUpdated, icon: Icon, children }: LegalPageS
             </div>
           </motion.div>
         </div>
-      </div>
+      </main>
 
       <Footer onContactClick={handleContactClick} />
     </div>

@@ -32,10 +32,10 @@ const Header = ({ onContactClick }: HeaderProps) => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-24 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-white/95 backdrop-blur-md shadow-xl border-b border-gray-200'
-          : 'bg-transparent'
+          : 'bg-white shadow-sm'
       }`}
     >
       {/* Top Bar */}
@@ -44,10 +44,13 @@ const Header = ({ onContactClick }: HeaderProps) => {
           <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-6">
             <div className="flex items-center space-x-1 sm:space-x-2">
               <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-blue-400" />
-              <span className="font-semibold text-xs sm:text-sm descender-safe" style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}>
-                <span className="text-blue-200/90 font-normal mr-1">Sales</span>
+              <a
+                href={`tel:${site.salesPhone}`}
+                className="font-semibold text-xs sm:text-sm descender-safe hover:text-blue-300 transition-colors"
+                style={{ lineHeight: '1.4', paddingBottom: '0.05em' }}
+              >
                 {site.salesPhoneDisplay}
-              </span>
+              </a>
             </div>
             <div className="hidden sm:flex items-center space-x-1 sm:space-x-2">
               <Star className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400" />
@@ -82,11 +85,11 @@ const Header = ({ onContactClick }: HeaderProps) => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="flex items-center flex-shrink-0"
             >
-              <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 xl:w-36 xl:h-36">
-                <img 
-                  src="/logo.png" 
-                  alt="TradeStock Logo" 
-                  className="w-full h-full object-contain"
+              <div className="flex h-10 max-w-[120px] sm:h-12 sm:max-w-[140px] md:h-14 md:max-w-[160px] lg:h-16 lg:max-w-[180px]">
+                <img
+                  src="/logo.png"
+                  alt="TradeStock Logo"
+                  className="h-full w-auto object-contain object-left"
                 />
               </div>
             </motion.div>

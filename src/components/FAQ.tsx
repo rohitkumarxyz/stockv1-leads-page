@@ -7,8 +7,7 @@ import {
   Target,
   ArrowRight,
   Phone,
-  Mail,
-  MapPin
+  Mail
 } from 'lucide-react';
 import PhoneInput from './PhoneInput';
 import CitySelect from './CitySelect';
@@ -468,15 +467,15 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
                 <div className="space-y-4">
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Phone className="w-5 h-5 text-primary-600" />
-                    <span>{site.salesPhoneDisplay} (sales)</span>
+                    <a href={`tel:${site.salesPhone}`} className="hover:text-primary-600">
+                      {site.salesPhoneDisplay}
+                    </a>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-600">
                     <Mail className="w-5 h-5 text-primary-600" />
-                    <span>chahatmangla.ra@gmail.com</span>
-                  </div>
-                  <div className="flex items-start space-x-3 text-gray-600">
-                    <MapPin className="w-5 h-5 text-primary-600 mt-1" />
-                    <span>1016, Gali No. 2, Bhoor Colony, Sector 29, Faridabad, Haryana, 121008</span>
+                    <a href={`mailto:${site.email}`} className="hover:text-primary-600 break-all">
+                      {site.email}
+                    </a>
                   </div>
                 </div>
               </div>

@@ -183,11 +183,35 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               ))}
             </motion.div>
 
-            {/* CTA Buttons */}
+            {/* Stats — shown before CTAs so Connect Now sits lower on the page */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 1.2 }}
+              className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-6 sm:mb-8"
+            >
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1.3 + index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-1.5 sm:mb-2 md:mb-3">
+                    <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
+                  </div>
+                  <div className="text-base sm:text-lg md:text-2xl font-bold text-white mb-0.5 sm:mb-1">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-blue-200 leading-tight">{stat.label}</div>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA Buttons */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 1.4 }}
               className="flex flex-col sm:flex-row gap-2.5 sm:gap-3 md:gap-4 mb-6 sm:mb-8 md:mb-12"
             >
               <motion.a
@@ -212,29 +236,6 @@ const Hero = ({ onFormSuccess, onContactClick }: HeroProps) => {
               </motion.button>
             </motion.div>
 
-            {/* Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
-              className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6"
-            >
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1.5 + index * 0.1 }}
-                  className="text-center"
-                >
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-xl flex items-center justify-center mx-auto mb-1.5 sm:mb-2 md:mb-3">
-                    <stat.icon className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 text-white" />
-                  </div>
-                  <div className="text-base sm:text-lg md:text-2xl font-bold text-white mb-0.5 sm:mb-1">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-blue-200 leading-tight">{stat.label}</div>
-                </motion.div>
-              ))}
-            </motion.div>
           </motion.div>
 
           {/* Right Content - Enhanced Form */}

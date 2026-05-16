@@ -14,6 +14,8 @@ import Privacy from './components/Privacy';
 import CompliancePage from './components/CompliancePage';
 import DisclosuresPage from './components/DisclosuresPage';
 import DisclaimerPage from './components/DisclaimerPage';
+import InvestorCharterPage from './components/InvestorCharterPage';
+import GrievanceBoardPage from './components/GrievanceBoardPage';
 
 function HomePage() {
   const leadFormRef = useRef<LeadFormRef>(null);
@@ -56,6 +58,8 @@ function App() {
         <Route path="/compliance" element={<CompliancePage />} />
         <Route path="/disclosures" element={<DisclosuresPage />} />
         <Route path="/disclaimer" element={<DisclaimerPage />} />
+        <Route path="/investor-charter" element={<InvestorCharterPage />} />
+        <Route path="/grievance-board" element={<GrievanceBoardPage />} />
       </Routes>
     </Router>
   );

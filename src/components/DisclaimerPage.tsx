@@ -54,7 +54,10 @@ const DisclaimerPage = () => {
           <a href={`mailto:${site.email}`} className="text-blue-600 hover:underline">
             {site.email}
           </a>{' '}
-          | {site.salesPhoneDisplay} (sales)
+          |{' '}
+          <a href={`tel:${site.salesPhone}`} className="text-blue-600 hover:underline">
+            {site.salesPhoneDisplay}
+          </a>
         </p>
       </section>
     </LegalPageShell>

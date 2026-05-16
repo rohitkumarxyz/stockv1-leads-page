@@ -1,7 +1,7 @@
 // Email configuration
 export const emailConfig = {
   // Owner email where form submissions will be sent
-  ownerEmail: 'chahatmangla.ra@gmail.com',
+  ownerEmail: 'help.tradestock@gmail.com',
   ownerName: 'Chhahat Agarwal',
   
   // Brevo API configuration
