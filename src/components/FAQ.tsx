@@ -13,7 +13,6 @@ import PhoneInput from './PhoneInput';
 import CitySelect from './CitySelect';
 import { sendFormSubmissionEmail } from '../services/emailService';
 import type { FormSubmissionData } from '../services/emailService';
-import { testEmailConfiguration } from '../utils/emailTest';
 import { site } from '../config/site';
 
 interface FAQProps {
@@ -134,11 +133,7 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
 
-    // Test email configuration first
-    testEmailConfiguration();
-
     try {
-      // Validate required fields
       if (!formData.fullName || !formData.email || !formData.mobile || !formData.state) {
         throw new Error('Please fill in all required fields');
       }
@@ -147,17 +142,15 @@ const FAQ = ({ onFormSuccess, onContactClick }: FAQProps) => {
         throw new Error('Please accept the Privacy Policy');
       }
 
-      // Send email only to owner (rohitsharma001914@gmail.com)
-      const ownerEmailResult = await sendFormSubmissionEmail(formData as FormSubmissionData);
+      const result = await sendFormSubmissionEmail(formData as FormSubmissionData);
 
-      if (ownerEmailResult.success) {
+      if (result.success) {
         setSubmitStatus('success');
-        // Navigate to thank you page after a short delay
         setTimeout(() => {
           onFormSuccess();
         }, 2000);
       } else {
-        throw new Error('Failed to send email. Please try again.');
+        throw new Error(result.error || 'Failed to submit. Please try again.');
       }
     } catch (error: any) {
       console.error('Form submission error:', error);
